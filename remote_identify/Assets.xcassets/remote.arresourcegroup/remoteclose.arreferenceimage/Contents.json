@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "remoteclose.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "unit" : "inches",
+    "width" : 1.9003486345148171
+  }
+}
