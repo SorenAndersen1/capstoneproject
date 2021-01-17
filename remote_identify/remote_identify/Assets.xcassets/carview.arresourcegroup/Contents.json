@@ -1,0 +1,32 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "airfilter.arreferenceimage"
+    },
+    {
+      "filename" : "battery.arreferenceimage"
+    },
+    {
+      "filename" : "engine_coolant.arreferenceimage"
+    },
+    {
+      "filename" : "engine_cover.arreferenceimage"
+    },
+    {
+      "filename" : "fuse_box.arreferenceimage"
+    },
+    {
+      "filename" : "hood.arreferenceimage"
+    },
+    {
+      "filename" : "power_steering_fluid.arreferenceimage"
+    },
+    {
+      "filename" : "washer_fluid.arreferenceimage"
+    }
+  ]
+}
