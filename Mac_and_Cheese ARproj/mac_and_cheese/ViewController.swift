@@ -11,7 +11,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     let MAX_STEP_NUM = 3 //Full amount of steps in process
-    let MIN_STEP_NUM = 0 //Minimum Step number (Should probably be one)
+    let MIN_STEP_NUM = 0 //Minimum Step number (Should probably be zero)
     let MAX_IMAGES_USED = 2 //Largest number of pictures used in single step (Based on AR resource group)
     var stepNum = 0 //What Step User is on
     var stepList:[Step]!
@@ -19,14 +19,14 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func prevStep(_ sender: Any) {
         stepNum -= 1 //Go to Previous Step
         if stepNum < MIN_STEP_NUM {
-            stepNum = MAX_STEP_NUM
+            stepNum = MAX_STEP_NUM - 1
         }
         sessionConfig() //restart AR session due to change in step
     }
     
     @IBAction func nextStep(_ sender: Any) {
         stepNum += 1 //Go to next step
-        if stepNum > MAX_STEP_NUM {
+        if stepNum > MAX_STEP_NUM - 1{
             stepNum = MIN_STEP_NUM
         }
         sessionConfig() //restart AR session due to change in step

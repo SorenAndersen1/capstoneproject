@@ -432,7 +432,7 @@
 				CODE_SIGN_ENTITLEMENTS = mac_and_cheese/mac_and_cheese.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6V5PK9N25M;
 				INFOPLIST_FILE = "$(SRCROOT)/mac_and_cheese/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
@@ -457,7 +457,7 @@
 				CODE_SIGN_ENTITLEMENTS = mac_and_cheese/mac_and_cheese.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6V5PK9N25M;
 				INFOPLIST_FILE = "$(SRCROOT)/mac_and_cheese/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
