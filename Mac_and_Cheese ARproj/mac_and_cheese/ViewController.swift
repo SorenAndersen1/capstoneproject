@@ -14,7 +14,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     let MIN_STEP_NUM = 0 //Minimum Step number (Should probably be one)
     let MAX_IMAGES_USED = 2 //Largest number of pictures used in single step (Based on AR resource group)
     var stepNum = 0 //What Step User is on
-    
+    var stepList:[Step]!
+
     @IBAction func prevStep(_ sender: Any) {
         stepNum -= 1 //Go to Previous Step
         if stepNum < MIN_STEP_NUM {
@@ -35,7 +36,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -43,37 +44,38 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         sceneView.autoenablesDefaultLighting = true
-        
+        stepList = stepSetup(MAX_STEP_NUM: MAX_STEP_NUM) //init steplist
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         //Once Everything is loaded in this func runs
         // Create a session configuration
-            sessionConfig()
-    
+        sessionConfig()
     }
+    
     func sessionConfig(){
         let configuration = ARWorldTrackingConfiguration()
-        var NextStep = ARReferenceImage.referenceImages(inGroupNamed: "firstStep", bundle: Bundle.main)
+        var NextStep = ARReferenceImage.referenceImages(inGroupNamed: "1_Step", bundle: Bundle.main)
         configuration.maximumNumberOfTrackedImages = MAX_IMAGES_USED;
-
-        switch stepNum {
-        case 0:
-            Instructions.text = "\(stepNum + 1). Identify burner clear of debris" //First Step doesnt have change in references images due to intialization
-        case 1:
-            NextStep = ARReferenceImage.referenceImages(inGroupNamed: "secondStep", bundle: Bundle.main) //Change AR resource folder to desired Step
-            Instructions.text = "\(stepNum + 1). Identify front of Annie's Mac and Cheese Box" //Change instruction text
-        default:
-            NextStep = ARReferenceImage.referenceImages(inGroupNamed: "firstStep", bundle: Bundle.main) //this should never be used but just in case
-        }
+        
+        Instructions.text = stepList[stepNum].instruction
+        NextStep = ARReferenceImage.referenceImages(inGroupNamed: stepList[stepNum].arResourceName, bundle: Bundle.main)
  
         configuration.detectionImages = NextStep //set session to newly selected folder
         
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors]) //reset all image recongition and anchors,
     }
-    
 
+    
+    func stepSetup(MAX_STEP_NUM: Int ) -> [Step]{
+        var stepARR:[Step] = [Step]() //setup dummy Step array
+        let instructionText = InstructionText(hardCodeType: "macAndCheese") //get Instruction set list from the class
+        for n in 0...MAX_STEP_NUM - 1 {
+            stepARR.append(Step(identityNum: n, instruction: "\(n + 1). " +  (instructionText.getInstruction(numDesired: n) ))) //assign step values to each step in the array
+        }
+        return stepARR //Send the newly made array to the didViewLoad func to allow for usage throughout funcs
+    }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
