@@ -1,0 +1,17 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "anniesBoxFront.arreferenceimage"
+    },
+    {
+      "filename" : "back_box.arreferenceimage"
+    },
+    {
+      "filename" : "boiling_water.arreferenceimage"
+    }
+  ]
+}

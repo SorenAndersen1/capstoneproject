@@ -1,0 +1,14 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "box_cheese.arreferenceimage"
+    },
+    {
+      "filename" : "cheese_pack.arreferenceimage"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "anniesBoxFront.arreferenceimage"
+    },
+    {
+      "filename" : "anniesBoxTop.arreferenceimage"
+    },
+    {
+      "filename" : "back_box.arreferenceimage"
+    },
+    {
+      "filename" : "bottom_boxes.arreferenceimage"
+    },
+    {
+      "filename" : "nutrition_facts.arreferenceimage"
+    }
+  ]
+}

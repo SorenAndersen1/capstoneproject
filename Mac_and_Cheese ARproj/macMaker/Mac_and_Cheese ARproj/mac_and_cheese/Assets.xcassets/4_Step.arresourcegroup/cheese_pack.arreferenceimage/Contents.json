@@ -1,0 +1,16 @@
+{
+  "images" : [
+    {
+      "filename" : "cheese_pack.jpg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "unit" : "inches",
+    "width" : 2.8154199642583606
+  }
+}
