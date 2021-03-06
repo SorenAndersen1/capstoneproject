@@ -5,6 +5,9 @@
   },
   "resources" : [
     {
+      "filename" : "boiling_water.arreferenceimage"
+    },
+    {
       "filename" : "pasta_boiling.arreferenceimage"
     }
   ]

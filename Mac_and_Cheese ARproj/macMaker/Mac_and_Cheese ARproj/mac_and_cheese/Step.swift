@@ -21,3 +21,15 @@ class Step {
     }
 
 }
+
+class ImageInfo {
+    let appearText: String
+    let arrowDir: String
+    let imgName: String
+    
+    init(appearText: String, arrowDir: String, imgName: String){
+        self.appearText = appearText
+        self.arrowDir = arrowDir
+        self.imgName = imgName
+    }
+}
