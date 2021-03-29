@@ -65,20 +65,61 @@ class InstructionText{
                 
                 self.infos.append(nil)
                 self.infos.append(nil)
-                */
+              
                 var appearTextArr = ["test", "test"]
                 var arrowDirArr = ["test", "test"]
                 var imgNameArr = ["test", "test"]
                 var highlightedColorArr = ["test", "test"]
                 
                 appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr)
+                 */
+            }
+            else if(hardCodeType == "wiiInstruct"){
+                //This is for the entire proccess
+                let instructionTextArr = [
+                "You Should never see this one",
+                "Identify Wiimote",
+                "Press top left power button",
+                "Read warning",
+                "Hold wiimote and point towards top left channel",
+                "Select Start Game button",
+                "Great job! Enjoy your game!"]
+                let successinstructionTextArr = [
+                    "You Should never see this one",
+                    "Nice wiimote!",
+                    "The Wii should be powering on!",
+                    "Once done, press A button on Wiimote",
+                    "Press A button on Wiimote",
+                    "The Wii should advance screens",
+                    "Great job! Enjoy your game!"]
+                if(successinstructionTextArr.count == instructionTextArr.count){
+                    self.successInstruct = successinstructionTextArr
+                    self.instruction = instructionTextArr
+                }
+                
+                
+                
+                var appearTextArr = ["test",
+                                     "test"]
+                var arrowDirArr = ["test", "test"]
+                var imgNameArr = ["test", "test"]
+                var highlightedColorArr = ["test", "test"]
+
+                appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr)
                 
             }
+            }
         
+        
+
+    func instructForLoop(instructArr: [String]){
+        for n in 0...instructArr.count - 1{
+            self.instruction.append(instructArr[n])
+        }
     }
     func appendInfo(appearText: [String], arrowDir: [String], imgName: [String], highlightedColor: [String]) -> [ImageInfo] {
         var fullImage = [ImageInfo]()
-        for n in 0...appearText.count {
+        for n in 0...appearText.count - 1 {
             fullImage.append(ImageInfo(appearText: appearText[n], arrowDir: arrowDir[n], imgName: imgName[n], highlightColor: highlightedColor[n]))
             
         }
