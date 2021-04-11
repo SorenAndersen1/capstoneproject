@@ -13,85 +13,32 @@ class InstructionText{
     
     init( hardCodeType: String) {
         //these are going to hardcoded for the mac and cheese, but can easily be refactored to allow for another func
-            if(hardCodeType == "macAndCheese"){
-                self.instruction.append("This should not appear")
-                self.instruction.append("Take out 8in pot and turn on large burner to medium-high")
-                self.instruction.append("Fill pot with 6 cups of water")
-                self.instruction.append("Take Annies Mac and Cheese out and open top")
-                self.instruction.append("Take cheese packet out of box")
-                self.instruction.append("Wait until water is boiling")
-                self.instruction.append("Pour pasta in water and wait for timer to expire")
-                self.instruction.append("Place colander in sink ")
-                self.instruction.append("Slowly tip pot into colander draining all water")
-                self.instruction.append("Shake colander 3 times, then place pasta back into pot")
-                self.instruction.append("Rip top of Cheese pack spreading evenly throughout pasta, splash milk in")
-                self.instruction.append("Place finished product in bowl")
-            /*
-                self.infos.append(nil)
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Place Pot", arrowDir: "Down", imgName: "burner"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "6 cups water", arrowDir: "Down", imgName: "water_pot"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Open", arrowDir: "Down", imgName: "anniesBoxFront"))
-                self.infos.append(ImageInfo(appearText: "Open", arrowDir: "Down", imgName: "back_box"))
-                
-                self.infos.append(ImageInfo(appearText: "Take Cheese", arrowDir: "Up", imgName: "box_cheese"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Wait until Boiling", arrowDir: "Unknown", imgName: "boiling_water"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Pour Pasta in", arrowDir: "Down", imgName: "boiling_water"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Place in Sink", arrowDir: "Down", imgName: "colander_empty"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Slowly Tip into Colander", arrowDir: "Left", imgName: "pasta_pot"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Shake!", arrowDir: "Up", imgName: "colander_pasta"))
-                self.infos.append(nil)
-                
-                self.infos.append(ImageInfo(appearText: "Rip Open", arrowDir: "Right", imgName: "cheese_pack"))
-                self.infos.append(ImageInfo(appearText: "Splash In", arrowDir: "Down", imgName: "milk"))
-                
-                self.infos.append(ImageInfo(appearText: "Done!", arrowDir: "Unknown", imgName: "finished_mac"))
-                self.infos.append(nil)
-                
-                self.infos.append(nil)
-                self.infos.append(nil)
-              
-                var appearTextArr = ["test", "test"]
-                var arrowDirArr = ["test", "test"]
-                var imgNameArr = ["test", "test"]
-                var highlightedColorArr = ["test", "test"]
-                
-                appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr)
-                 */
-            }
-            else if(hardCodeType == "wiiInstruct"){
+            if(hardCodeType == "airFilter"){
                 //This is for the entire proccess
                 let instructionTextArr = [
                 "You Should never see this one",
-                "Identify Wiimote",
-                "Press top left power button",
-                "Read warning",
-                "Hold wiimote and point towards top left channel",
-                "Select Start Game button",
-                "Great job! Enjoy your game!"]
+                "Identify hood",
+                "Identify air filter",
+                "Snap open obvious clips on the bottom and top right",
+                "Snap open clip under left cord",
+                "Pry back lid to left",
+                "Take out old air filter",
+                "Place new air filter in highlighted hole",
+                    "Close lid and snap on obvious clips",
+                    "Snap close clip under the left hose",
+                    "Close hood"]
                 let successinstructionTextArr = [
                     "You Should never see this one",
-                    "Nice wiimote!",
-                    "The Wii should be powering on!",
-                    "Once done, press A button on Wiimote",
-                    "Press A button on Wiimote",
-                    "The Wii should advance screens",
-                    "Great job! Enjoy your game!"]
+                    "Open car hood",
+                    "Air filter found",
+                    "One clip remaining",
+                    "All clips released",
+                    "Used air filter",
+                    "Place aside for now",
+                    "Ensure air filter is flush",
+                        "3 clips snapped",
+                        "All clips snapped",
+                        "Great job! You are safe to drive!"]
                 if(successinstructionTextArr.count == instructionTextArr.count){
                     self.successInstruct = successinstructionTextArr
                     self.instruction = instructionTextArr
@@ -104,9 +51,248 @@ class InstructionText{
                 var arrowDirArr = ["test", "test"]
                 var imgNameArr = ["test", "test"]
                 var highlightedColorArr = ["test", "test"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
 
-                appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr)
+                //Step 1 of Replacing Kia Air Filter
+                appearTextArr = ["Open hood"]
+                arrowDirArr = ["up"]
+                imgNameArr = ["kiaHood"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
                 
+                //Step 2 of Replacing Kia Air Filter
+                appearTextArr = ["Found Air Filter"]
+                arrowDirArr = ["down"]
+                imgNameArr = ["Air Filter"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 3 of Replacing Kia Air Filter
+                appearTextArr = ["Snap clips"]
+                arrowDirArr = ["Unknown"]
+                imgNameArr = ["Air Filter_"]
+                highlightedColorArr = ["red_corners"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 4 of Replacing Kia Air Filter
+                appearTextArr = ["Snap final clip", "Below this cord"]
+                arrowDirArr = ["Unknown", "down"]
+                imgNameArr = ["airfilter_full3", "cord"]
+                highlightedColorArr = ["red_left", "green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 5 of Replacing Kia Air Filter
+                appearTextArr = ["Reveal air filter"]
+                arrowDirArr = ["left"]
+                imgNameArr = ["airfilter_raw"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 6 of Replacing Kia Air Filter
+                appearTextArr = ["Remove", "Place here"]
+                arrowDirArr = ["Unknown", "down"]
+                imgNameArr = ["airFilter", "airfilter_hole"]
+                highlightedColorArr = ["green_full", "red_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+
+                //Step 7 of Replacing Kia Air Filter
+                appearTextArr = ["New Air filter"]
+                arrowDirArr = ["Unknown"]
+                imgNameArr = ["airfilter_raw3"]
+                highlightedColorArr = ["none_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 8 of Replacing Kia Air Filter
+                appearTextArr = ["Close hood"]
+                arrowDirArr = ["down"]
+                imgNameArr = ["kiaHood1"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+            }
+            else if(hardCodeType == "pbj"){
+                //This is for the entire proccess
+                let instructionTextArr = [
+                "You Should never see this one",
+                "Identify Bread",
+                "Take 2 slices of bread out, identify one",
+                "Open Peanutbutter and Jelly out",
+                "Use knife to spread evenly on each slice of bread",
+                "Take peanutbutter spread side and place on top of jelly side",
+                "Grab sandwich bags",
+                "Place sandwich inside of bag"]
+                let successinstructionTextArr = [
+                    "You Should never see this one",
+                    "Delicious bread, good choice!",
+                    "Bread in spreadable position",
+                    "Spreads readied",
+                    "Spreads applied",
+                    "Sandwich constructed, good job!",
+                    "Open bag using zipper",
+                    "Congrats you have lunch!"]
+      
+                    self.successInstruct = successinstructionTextArr
+                    self.instruction = instructionTextArr
+                
+                
+                
+                
+                var appearTextArr = ["test",
+                                     "test"]
+                var arrowDirArr = ["test", "test"]
+                var imgNameArr = ["test", "test"]
+                var highlightedColorArr = ["test", "test"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+
+                //Step 1 of making PBJ
+                appearTextArr = ["Open Bread"]
+                arrowDirArr = ["Unknown"]
+                imgNameArr = ["breadbag"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 2 of making PBJ
+                appearTextArr = ["Place bread"]
+                arrowDirArr = ["down"]
+                imgNameArr = ["bread"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 3 of making PBJ
+                appearTextArr = ["Spin Lid right", "Open Jar", "Open Jar", "Spin Lid Right"]
+                arrowDirArr = ["right", "down", "down", "right"]
+                imgNameArr = ["canLid", "jamJar", "pb", "pbLid"]
+                highlightedColorArr = ["red_circle", "red_full", "green_full", "green_circle"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                
+                //Step 4 of making PBJ
+                appearTextArr = ["Jam spread", "PB spread"]
+                arrowDirArr = ["Unknown", "Unknown"]
+                imgNameArr = ["pbBread", "jam_boread"]
+                highlightedColorArr = ["red_full", "green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 5 of making PBJ
+                appearTextArr = ["Finished sandwich"]
+                arrowDirArr = ["Unknown"]
+                imgNameArr = ["sandwich"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 6 of making PBJ
+                appearTextArr = ["Take Out Bag"]
+                arrowDirArr = ["Unknown"]
+                imgNameArr = ["ziploc"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 7 of making PBJ
+                appearTextArr = ["Complete sandwich!"]
+                arrowDirArr = ["down"]
+                imgNameArr = ["bagged"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+            }
+            else if(hardCodeType == "cadoo"){
+                //This is for the entire proccess
+                let instructionTextArr = [
+                "You Should never see this one",
+                "Identify box",
+                "Identify board",
+                "Fold board out so circle side is visible",
+                "Take notepads out and set on oppisites side of the board",                "Remove all 4 sets of pieces and place one each side of gameboard",
+                    "Take boxes of cards reading 'Solo' and 'Combo' out",
+                "Remove timer and clay and place die in the middle",
+                "If highlighted the board is set up"]
+                let successinstructionTextArr = [
+                    "You Should never see this one",
+                    "Cadoo Deluxe Edition",
+                    "Place board on table",
+                    "Board correctly positioned",
+                    "Notepads found",
+                    "Pieces in position",
+                    "Card boxes found",
+                    "Assorted pieces ready",
+                    "Congrats! Have fun playing Cadoo!"]
+                if(successinstructionTextArr.count == instructionTextArr.count){
+                    self.successInstruct = successinstructionTextArr
+                    self.instruction = instructionTextArr
+                }
+                
+                
+                
+                var appearTextArr = ["test",
+                                     "test"]
+                var arrowDirArr = ["test", "test"]
+                var imgNameArr = ["test", "test"]
+                var highlightedColorArr = ["test", "test"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 1 of Setting Up Cadoo
+                appearTextArr = ["Cadoo Box"]
+                arrowDirArr = ["down"]
+                imgNameArr = ["cadooBox"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 2 of Setting Up Cadoo
+                appearTextArr = ["Fold out"]
+                arrowDirArr = ["right"]
+                imgNameArr = ["foldOut"]
+                highlightedColorArr = ["red_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 3 of Setting Up Cadoo
+                appearTextArr = ["Full Board"]
+                arrowDirArr = ["down"]
+                imgNameArr = ["board"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                
+                //Step 4 of Setting Up Cadoo
+                appearTextArr = ["Full Board", "Notepad", "Notepad"]
+                arrowDirArr = ["down", "Unknown", "Unknown"]
+                imgNameArr = ["board1", "notepad1", "notepad2"]
+                highlightedColorArr = ["green_full",
+                                       "green_full",
+                                       "green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 5 of Setting Up Cadoo
+                appearTextArr = ["Full Board", "Pieces still in", "Pieces Placed"]
+                arrowDirArr = ["down", "Unknown", "Unknown"]
+                imgNameArr = ["board2", "emptierBox", "semiFullbox"]
+                highlightedColorArr = ["green_full",
+                                       "green_full",
+                                       "red_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 6 of Setting Up Cadoo
+                appearTextArr = ["Combo Cards", "Solo Cards"]
+                arrowDirArr = ["Unknown", "Unknown"]
+                imgNameArr = ["combo", "solo"]
+                highlightedColorArr = ["green_full",
+                                       "green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 7 of Setting Up Cadoo
+                appearTextArr = ["Clay", "Empty box", "Glasses"]
+                arrowDirArr = ["Unknown", "Unknown", "Unknown"]
+                imgNameArr = ["clay", "emptyBox", "glasses"]
+                highlightedColorArr = ["green_full",
+                                       "green_full",
+                                       "green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
+                
+                //Step 8 of Setting Up Cadoo
+                appearTextArr = ["Finished Board!"]
+                arrowDirArr = ["down"]
+                imgNameArr = ["board_and_dice"]
+                highlightedColorArr = ["green_full"]
+                self.infos.append(appendInfo(appearText: appearTextArr, arrowDir: arrowDirArr, imgName: imgNameArr, highlightedColor: highlightedColorArr))
             }
             }
         
@@ -127,10 +313,17 @@ class InstructionText{
         return fullImage
     }
     func getsuccessInstruct(numDesired: Int) -> String {
-        return self.successInstruct[numDesired]
+
+            return self.successInstruct[numDesired]
+
+
     }
     func getInstruction(numDesired: Int) -> String {
-        return self.instruction[numDesired]
+
+            return self.instruction[numDesired]
+        
+
+
     }
     func getInfo(numDesired: Int) -> [ImageInfo] {
         return self.infos[numDesired]

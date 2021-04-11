@@ -7,40 +7,56 @@ import UIKit;
 
 class ViewController: UIViewController, ARSCNViewDelegate {
     @objc func prevStep(_ sender: Any) {
-        stepNum -= 1 //Go to Previous Step
-        if stepNum < MIN_STEP_NUM {
-            stepNum = MAX_STEP_NUM - 1
-        }
-        sessionConfig() //restart AR session due to change in step
-    }
+        // stepNum -= 1 //Go to Previous Step
+       //  if stepNum < MIN_STEP_NUM {
+        //     stepNum = MAX_STEP_NUM - 1
+        // }
+         sessionConfig() //restart AR session due to change in step
+     }
+     
+     @objc func nextStep(_ sender: Any) {
+        // stepNum += 1 //Go to next step
+        // if stepNum > MAX_STEP_NUM - 1{
+        //     stepNum = MIN_STEP_NUM
+        // }
+         sessionConfig() //restart AR session due to change in step
+     }
     
-    @objc func nextStep(_ sender: Any) {
+    var stepArrows = ["down": "ArrowDown",
+                            "left": "ArrowLeft",
+                            "right": "ArrowRight",
+                            "up": "ArrowUp"]
+    fileprivate let highlightMaskValue: Int = 2
+    var infoList:[[ImageInfo]]!
+
+    @IBAction func nextsStep(_ sender: Any) {
         stepNum += 1 //Go to next step
         if stepNum > MAX_STEP_NUM - 1{
             stepNum = MIN_STEP_NUM
         }
         sessionConfig() //restart AR session due to change in step
-
     }
-    
-    var stepArrows = ["Down": "ArrowDown",
-                            "Left": "ArrowLeft",
-                            "Right": "ArrowRight",
-                            "Up": "ArrowUp"]
-    fileprivate let highlightMaskValue: Int = 2
-    var infoList:[[ImageInfo]]!
 
+    @IBAction func prevsStep(_ sender: Any) {
+    stepNum -= 1 //Go to Previous Step
+    if stepNum < MIN_STEP_NUM {
+        stepNum = MAX_STEP_NUM - 1
+    }
+    sessionConfig() //restart AR session due to change in step
+}
     @IBOutlet weak var Instructions: UILabel!
+    
     @IBOutlet var sceneView: ARSCNView!
 
     @IBOutlet weak var timeLabel: UILabel!
-    let MAX_STEP_NUM = 12 //Full amount of steps in process
+    var MAX_STEP_NUM = 8 //Full amount of steps in process
     let MIN_STEP_NUM = 1 //Minimum Step number (Should probably be one)
-    let MAX_IMAGES_USED = 5 //Largest number of pictures used in single step (Based on AR resource group)
+    let MAX_IMAGES_USED = 4 //Largest number of pictures used in single step (Based on AR resource group)
     var stepNum = 1 //What Step User is on
     var stepList:[Step]!
     var timer:Timer?
     var timeLeft = [5,9]
+    var hardCodeType:String = ""
     
 
 
@@ -55,6 +71,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         sceneView.autoenablesDefaultLighting = true
+        hardCodeType = "cadoo"
 
         stepList = stepSetup(MAX_STEP_NUM: MAX_STEP_NUM) //init steplist
 
@@ -65,7 +82,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         //Once Everything is loaded in this func runs
         // Create a session configuration
 
- 
         sessionConfig()
     }
     
@@ -83,7 +99,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         }
  */
         let configuration = ARWorldTrackingConfiguration()
-        var NextStep = ARReferenceImage.referenceImages(inGroupNamed: "1_Step", bundle: Bundle.main)
+        var NextStep = ARReferenceImage.referenceImages(inGroupNamed: "1_Step_pbj", bundle: Bundle.main)
         configuration.maximumNumberOfTrackedImages = MAX_IMAGES_USED;
         
         Instructions.text = stepList[stepNum].instruction
@@ -91,17 +107,37 @@ class ViewController: UIViewController, ARSCNViewDelegate {
  
         configuration.detectionImages = NextStep //set session to newly selected folder
         
+        /*
+        for i in 0...infoList[stepNum].count - 1{
+            let textCheck = infoList[stepNum][i].appearText
+            let nameCheck = infoList[stepNum][i].imgName
+            let arrowCheck = infoList[stepNum][i].arrowDir
+            var highlighCheck = infoList[stepNum][i].highLightColor
+            let array = highlighCheck.components(separatedBy: "_")
+            
+            highlighCheck = array[0]
+            let shapeCheck = array[1]
+            print(i)
+            print(textCheck)
+            print(nameCheck)
+            print(shapeCheck)
+            print(highlighCheck)
+
+        }
+ */
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors]) //reset all image recongition and anchors,
     }
 
     
     func stepSetup(MAX_STEP_NUM: Int ) -> [Step]{
         var stepARR:[Step] = [Step]() //setup dummy Step array
-        let instructionText = InstructionText(hardCodeType: "macAndCheese") //get Instruction set list from the class
-        for n in 0...MAX_STEP_NUM - 1{
-            stepARR.append(Step(identityNum: n, instruction: "\(n). " +  (instructionText.getInstruction(numDesired: n)), successInstruct: (instructionText.getsuccessInstruct(numDesired: n)))) //assign step values to each step in the array
+        let instructionText = InstructionText(hardCodeType: hardCodeType) //get Instruction set list from the class
+        self.MAX_STEP_NUM = instructionText.instruction.count
+        for n in 0...self.MAX_STEP_NUM - 1{
+            stepARR.append(Step(identityNum: n, instruction: "\(n). " +  (instructionText.getInstruction(numDesired: n)), successInstruct: (instructionText.getsuccessInstruct(numDesired: n)), hardCodeType: hardCodeType)) //assign step values to each step in the array
         }
         infoList = instructionText.getInfos()
+        
 
         
         return stepARR //Send the newly made array to the didViewLoad func to allow for usage throughout funcs
@@ -152,21 +188,36 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                 */
 
                     let objName = imageAnchor.referenceImage.name //set string value to picture file name of recongized image
-            var textString = ""
-            var arrowDir = "Unknown"
            // let currentInfos = infoList[stepNum]
-           
-            for i in 0...infoList[stepNum].count - 1{
-                let textCheck = infoList[stepNum][i].appearText
+           var doubleIT = 0
+            var i = 0
+            repeat{
                 let nameCheck = infoList[stepNum][i].imgName
-                let arrowCheck = infoList[stepNum][i].arrowDir
+                    if(nameCheck == objName){
+                        doubleIT = i
+                        break
+                    }
+                    else{
+                    i = i + 1
+                    }
+    
+            }while i < infoList[stepNum].count - 1
+
+            
+                let textCheck = infoList[stepNum][doubleIT].appearText
+                let nameCheck = infoList[stepNum][doubleIT].imgName
+                let arrowCheck = infoList[stepNum][doubleIT].arrowDir
+                var highlighCheck = infoList[stepNum][doubleIT].highLightColor
+
+                let array = highlighCheck.components(separatedBy: "_")
                 
-                if( nameCheck == objName || nameCheck == ""){
-                    textString = textCheck
-                    arrowDir = arrowCheck
-                }
-            else if( nameCheck != ""){
-                    let text = SCNText(string: textString, extrusionDepth: 2)
+                highlighCheck = array[0]
+                let shapeCheck = array[1]
+            
+                if(nameCheck == objName){
+
+
+                    let text = SCNText(string: textCheck, extrusionDepth: 2)
                         //setup text value to be used in AR image
                     let material = SCNMaterial() //set material
                     material.diffuse.contents = UIColor.white //text color = BLUE
@@ -179,27 +230,65 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                     Textnode.geometry = text
                     Textnode.eulerAngles.x = -.pi / 2
                     node.addChildNode(Textnode) //add node to list of nodes being used
-            }
-            else if(arrowDir != "Unknown"){
-                let image = UIImage(named: stepArrows[arrowDir] ?? "")
-            let rotImg = image?.imageByMakingWhiteBackgroundTransparent()
-                let Imgnode = SCNNode(geometry: SCNPlane(width: imageAnchor.referenceImage.physicalSize.width / 2, height: imageAnchor.referenceImage.physicalSize.height / 2))
-                    Imgnode.position = SCNVector3(x:0.0, y:0.05, z:-0.11)
-                    Imgnode.geometry?.firstMaterial?.diffuse.contents = rotImg
+        
+                    if(arrowCheck != "Unknown"){
+                        let image = UIImage(named: stepArrows[arrowCheck] ?? "")
+                    let rotImg = image?.imageByMakingWhiteBackgroundTransparent()
+                        let Imgnode = SCNNode(geometry: SCNPlane(width: imageAnchor.referenceImage.physicalSize.width / 2, height: imageAnchor.referenceImage.physicalSize.height / 2))
+                            Imgnode.position = SCNVector3(x:0.0, y:0.05, z:-0.11)
+                            Imgnode.geometry?.firstMaterial?.diffuse.contents = rotImg
 
-                    node.addChildNode(Imgnode)
-            }
-            
-                let plane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.80 , height: imageAnchor.referenceImage.physicalSize.height * 0.80)
+                            node.addChildNode(Imgnode)
                 
-                plane.firstMaterial?.diffuse.contents = UIColor(hue: 0.3, saturation: 1, brightness: 1, alpha: 0.5)
-                let planeNode = SCNNode(geometry: plane)
+                    }
                 
-                planeNode.eulerAngles.x = -.pi / 2
-                
-                node.addChildNode(planeNode)
-                
-                            }
+                    if(highlighCheck != "none"){
+                        
+                                            
+                                       
+                                          
+                                            var choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.80 , height: imageAnchor.referenceImage.physicalSize.height * 0.80)
+                                            
+                                                switch shapeCheck {
+                                                case "full":
+                                                    choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.90 , height: imageAnchor.referenceImage.physicalSize.height * 0.90)
+                                                case "circle":
+                                                    choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.80 , height: imageAnchor.referenceImage.physicalSize.height * 0.80)
+                                                    choosenSize.cornerRadius = imageAnchor.referenceImage.physicalSize.width
+                                                default:
+                                                    choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.80 , height: imageAnchor.referenceImage.physicalSize.height * 0.80)
+                                                }
+                                            
+                                            let plane = choosenSize
+                                            var colorChoosen = UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 1.0) /* #00ea07 */
+                                            
+                                                switch highlighCheck {
+                                                case "green":
+                                                    colorChoosen = UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 0.5) /* #00ea07 */
+                                                case "red":
+                                                    colorChoosen = UIColor(hue: 0.0056, saturation: 1, brightness: 0.82, alpha: 0.5) /* #d10600 */
+                                                default:
+                                                    colorChoosen = UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 0.5) /* #00ea07 */
+                                                }
+                                            
+                                            
+                                            plane.firstMaterial?.diffuse.contents = colorChoosen
+                                            let planeNode = SCNNode(geometry: plane)
+                                            
+                                            planeNode.eulerAngles.x = -.pi / 2
+                                            
+                                            node.addChildNode(planeNode)
+
+                            
+                                
+                                    
+                    }
+
+                }
+                else{
+                    print("Error")
+                }
+        
         //node.setCategoryBitMaskForAllHierarchy(highlightMaskValue)
 
         
