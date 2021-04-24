@@ -86,18 +86,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     }
     
     func sessionConfig(){
-        /*
-        if(stepNum == 6 || stepNum == 5){
-
-            
-            timeLabel.text = "\(timeLeft[stepNum - 5]) Minutes Left"
-            timeLabel.isHidden = false;//show timer text
-            timer = Timer.scheduledTimer(timeInterval: 60.0, target: self, selector: #selector(onTimerFires), userInfo: nil, repeats: true)
-        }
-        else{
-            timeLabel.isHidden = true;//hide timer text
-        }
- */
         let configuration = ARWorldTrackingConfiguration()
         var NextStep = ARReferenceImage.referenceImages(inGroupNamed: "1_Step_pbj", bundle: Bundle.main)
         configuration.maximumNumberOfTrackedImages = MAX_IMAGES_USED;
@@ -106,38 +94,20 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         NextStep = ARReferenceImage.referenceImages(inGroupNamed: stepList[stepNum].arResourceName, bundle: Bundle.main)
  
         configuration.detectionImages = NextStep //set session to newly selected folder
-        
-        /*
-        for i in 0...infoList[stepNum].count - 1{
-            let textCheck = infoList[stepNum][i].appearText
-            let nameCheck = infoList[stepNum][i].imgName
-            let arrowCheck = infoList[stepNum][i].arrowDir
-            var highlighCheck = infoList[stepNum][i].highLightColor
-            let array = highlighCheck.components(separatedBy: "_")
-            
-            highlighCheck = array[0]
-            let shapeCheck = array[1]
-            print(i)
-            print(textCheck)
-            print(nameCheck)
-            print(shapeCheck)
-            print(highlighCheck)
-
-        }
- */
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors]) //reset all image recongition and anchors,
     }
 
     
     func stepSetup(MAX_STEP_NUM: Int ) -> [Step]{
         var stepARR:[Step] = [Step]() //setup dummy Step array
-        let instructionText = InstructionText(hardCodeType: hardCodeType) //get Instruction set list from the class
+        if let instructionText = createInstructionText(filename: hardCodeType){
+            //InstructionText(hardCodeType: hardCodeType) //get Instruction set list from the class
         self.MAX_STEP_NUM = instructionText.instruction.count
         for n in 0...self.MAX_STEP_NUM - 1{
             stepARR.append(Step(identityNum: n, instruction: "\(n). " +  (instructionText.getInstruction(numDesired: n)), successInstruct: (instructionText.getsuccessInstruct(numDesired: n)), hardCodeType: hardCodeType)) //assign step values to each step in the array
         }
         infoList = instructionText.getInfos()
-        
+        }
 
         
         return stepARR //Send the newly made array to the didViewLoad func to allow for usage throughout funcs

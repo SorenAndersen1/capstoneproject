@@ -1,0 +1,123 @@
+{
+    "instructions":[
+    {
+       "instructionText":"Identify hood",
+       "successText":"Open car hood",
+       "itemInfos":[
+       {
+           "appearText": "Open hood",
+           "arrowDir": "up",
+           "imgName": "kiaHood",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Identify air filter",
+       "successText":"Air filter found",
+       "itemInfos":[
+       {
+           "appearText": "Found Air Filter",
+           "arrowDir": "down",
+           "imgName": "Air Filter",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Snap open obvious clips on the bottom and top right",
+       "successText":"One clip remaining",
+       "itemInfos":[
+       {
+           "appearText": "Snap clips",
+           "arrowDir": "Unknown",
+           "imgName": "Air Filter_",
+           "highlightColor":"red_corners"
+       }
+       ]
+    },
+    {
+       "instructionText":"Snap open clip under left cord",
+       "successText":"All clips released",
+       "itemInfos":[
+       {
+           "appearText": "Snap final clip",
+           "arrowDir": "Unknown",
+           "imgName": "airfilter_full3",
+           "highlightColor":"red_left"
+       },
+       {
+           "appearText": "Below this cord",
+           "arrowDir": "down",
+           "imgName": "cord",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Pry back lid to left",
+       "successText":"Used air filter",
+       "itemInfos":[
+       {
+           "appearText": "Reveal air filter",
+           "arrowDir": "left",
+           "imgName": "airfilter_raw",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take out old air filter",
+       "successText":"Place aside for now",
+       "itemInfos":[
+       {
+           "appearText": "Remove",
+           "arrowDir": "Unknown",
+           "imgName": "airFilter",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Place here",
+           "arrowDir": "down",
+           "imgName": "airfilter_hole",
+           "highlightColor":"red_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Place new air filter in highlighted hole",
+       "successText":"Ensure air filter is flush",
+       "itemInfos":[
+       {
+           "appearText": "New Air filter",
+           "arrowDir": "Unknown",
+           "imgName": "airfilter_raw3",
+           "highlightColor":"none_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Close lid and snap on obvious clips",
+       "successText":"3 clips snapped",
+       "itemInfos":[]
+    },
+    {
+       "instructionText":"Snap close clip under the left hose",
+       "successText":"All clips snapped",
+       "itemInfos":[]
+    },
+    {
+       "instructionText":"Close hood",
+       "successText":"Great job! You are safe to drive!",
+       "itemInfos":[
+       {
+           "appearText": "Close hood",
+           "arrowDir": "down",
+           "imgName": "kiaHood1",
+           "highlightColor":"green_full"
+       }
+       ]
+    }
+    ]
+}
+
