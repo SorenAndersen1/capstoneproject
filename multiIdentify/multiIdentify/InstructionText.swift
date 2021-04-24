@@ -59,10 +59,5 @@ class InstructionText{
         self.successInstruct.append(text)
 
     }
-    
-    func appendImageInfo(text: String){
-        self.successInstruct.append(text)
-
-    }
 
 }

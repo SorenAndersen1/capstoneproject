@@ -100,8 +100,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func stepSetup(MAX_STEP_NUM: Int ) -> [Step]{
         var stepARR:[Step] = [Step]() //setup dummy Step array
+        
+        //get Instruction set list from the class
         if let instructionText = createInstructionText(filename: hardCodeType){
-            //InstructionText(hardCodeType: hardCodeType) //get Instruction set list from the class
         self.MAX_STEP_NUM = instructionText.instruction.count
         for n in 0...self.MAX_STEP_NUM - 1{
             stepARR.append(Step(identityNum: n, instruction: "\(n). " +  (instructionText.getInstruction(numDesired: n)), successInstruct: (instructionText.getsuccessInstruct(numDesired: n)), hardCodeType: hardCodeType)) //assign step values to each step in the array

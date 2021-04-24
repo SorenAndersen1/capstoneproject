@@ -18,7 +18,6 @@
 		74F0B52F261257D4001FDB79 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0B52D261257D4001FDB79 /* Step.swift */; };
 		74F0B53426125B4B001FDB79 /* InstructionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0B53326125B4B001FDB79 /* InstructionText.swift */; };
 		C378D1A22633BD1D008DB6E1 /* JsonDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378D1A12633BD1D008DB6E1 /* JsonDecode.swift */; };
-		C378D1A72633BE2B008DB6E1 /* InstructionInfo.json in Resources */ = {isa = PBXBuildFile; fileRef = C378D1A62633BE2B008DB6E1 /* InstructionInfo.json */; };
 		C378D1AD26349455008DB6E1 /* cadoo.json in Resources */ = {isa = PBXBuildFile; fileRef = C378D1AC26349455008DB6E1 /* cadoo.json */; };
 		C378D1B5263496E8008DB6E1 /* pbj.json in Resources */ = {isa = PBXBuildFile; fileRef = C378D1B4263496E8008DB6E1 /* pbj.json */; };
 		C378D1BD263498B9008DB6E1 /* airFilter.json in Resources */ = {isa = PBXBuildFile; fileRef = C378D1BC263498B9008DB6E1 /* airFilter.json */; };
@@ -59,7 +58,6 @@
 		74F0B52D261257D4001FDB79 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		74F0B53326125B4B001FDB79 /* InstructionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionText.swift; sourceTree = "<group>"; };
 		C378D1A12633BD1D008DB6E1 /* JsonDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecode.swift; sourceTree = "<group>"; };
-		C378D1A62633BE2B008DB6E1 /* InstructionInfo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = InstructionInfo.json; sourceTree = "<group>"; };
 		C378D1AC26349455008DB6E1 /* cadoo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cadoo.json; sourceTree = "<group>"; };
 		C378D1B4263496E8008DB6E1 /* pbj.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pbj.json; sourceTree = "<group>"; };
 		C378D1BC263498B9008DB6E1 /* airFilter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = airFilter.json; sourceTree = "<group>"; };
@@ -124,7 +122,6 @@
 				74F0B50426125799001FDB79 /* Info.plist */,
 				74F0B53326125B4B001FDB79 /* InstructionText.swift */,
 				C378D1A12633BD1D008DB6E1 /* JsonDecode.swift */,
-				C378D1A62633BE2B008DB6E1 /* InstructionInfo.json */,
 			);
 			path = multiIdentify;
 			sourceTree = "<group>";
@@ -262,7 +259,6 @@
 			files = (
 				C378D1BD263498B9008DB6E1 /* airFilter.json in Resources */,
 				74F0B4F926125798001FDB79 /* art.scnassets in Resources */,
-				C378D1A72633BE2B008DB6E1 /* InstructionInfo.json in Resources */,
 				C378D1B5263496E8008DB6E1 /* pbj.json in Resources */,
 				74F0B50326125799001FDB79 /* LaunchScreen.storyboard in Resources */,
 				C378D1AD26349455008DB6E1 /* cadoo.json in Resources */,
