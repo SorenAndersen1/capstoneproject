@@ -17,6 +17,10 @@
 		74F0B51926125799001FDB79 /* multiIdentifyUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0B51826125799001FDB79 /* multiIdentifyUITests.swift */; };
 		74F0B52F261257D4001FDB79 /* Step.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0B52D261257D4001FDB79 /* Step.swift */; };
 		74F0B53426125B4B001FDB79 /* InstructionText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0B53326125B4B001FDB79 /* InstructionText.swift */; };
+		C378D1A22633BD1D008DB6E1 /* JsonDecode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C378D1A12633BD1D008DB6E1 /* JsonDecode.swift */; };
+		C378D1AD26349455008DB6E1 /* cadoo.json in Resources */ = {isa = PBXBuildFile; fileRef = C378D1AC26349455008DB6E1 /* cadoo.json */; };
+		C378D1B5263496E8008DB6E1 /* pbj.json in Resources */ = {isa = PBXBuildFile; fileRef = C378D1B4263496E8008DB6E1 /* pbj.json */; };
+		C378D1BD263498B9008DB6E1 /* airFilter.json in Resources */ = {isa = PBXBuildFile; fileRef = C378D1BC263498B9008DB6E1 /* airFilter.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,10 @@
 		74F0B51A26125799001FDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74F0B52D261257D4001FDB79 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		74F0B53326125B4B001FDB79 /* InstructionText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstructionText.swift; sourceTree = "<group>"; };
+		C378D1A12633BD1D008DB6E1 /* JsonDecode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonDecode.swift; sourceTree = "<group>"; };
+		C378D1AC26349455008DB6E1 /* cadoo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = cadoo.json; sourceTree = "<group>"; };
+		C378D1B4263496E8008DB6E1 /* pbj.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = pbj.json; sourceTree = "<group>"; };
+		C378D1BC263498B9008DB6E1 /* airFilter.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = airFilter.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +111,7 @@
 		74F0B4F526125798001FDB79 /* multiIdentify */ = {
 			isa = PBXGroup;
 			children = (
+				C378D1AB26349440008DB6E1 /* InstructionSets */,
 				74F0B52D261257D4001FDB79 /* Step.swift */,
 				74F0B4F626125798001FDB79 /* AppDelegate.swift */,
 				74F0B4F826125798001FDB79 /* art.scnassets */,
@@ -112,6 +121,7 @@
 				74F0B50126125799001FDB79 /* LaunchScreen.storyboard */,
 				74F0B50426125799001FDB79 /* Info.plist */,
 				74F0B53326125B4B001FDB79 /* InstructionText.swift */,
+				C378D1A12633BD1D008DB6E1 /* JsonDecode.swift */,
 			);
 			path = multiIdentify;
 			sourceTree = "<group>";
@@ -132,6 +142,16 @@
 				74F0B51A26125799001FDB79 /* Info.plist */,
 			);
 			path = multiIdentifyUITests;
+			sourceTree = "<group>";
+		};
+		C378D1AB26349440008DB6E1 /* InstructionSets */ = {
+			isa = PBXGroup;
+			children = (
+				C378D1AC26349455008DB6E1 /* cadoo.json */,
+				C378D1B4263496E8008DB6E1 /* pbj.json */,
+				C378D1BC263498B9008DB6E1 /* airFilter.json */,
+			);
+			path = InstructionSets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -237,8 +257,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C378D1BD263498B9008DB6E1 /* airFilter.json in Resources */,
 				74F0B4F926125798001FDB79 /* art.scnassets in Resources */,
+				C378D1B5263496E8008DB6E1 /* pbj.json in Resources */,
 				74F0B50326125799001FDB79 /* LaunchScreen.storyboard in Resources */,
+				C378D1AD26349455008DB6E1 /* cadoo.json in Resources */,
 				74F0B50026125799001FDB79 /* Assets.xcassets in Resources */,
 				74F0B4FE26125798001FDB79 /* Main.storyboard in Resources */,
 			);
@@ -266,6 +289,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74F0B4FB26125798001FDB79 /* ViewController.swift in Sources */,
+				C378D1A22633BD1D008DB6E1 /* JsonDecode.swift in Sources */,
 				74F0B52F261257D4001FDB79 /* Step.swift in Sources */,
 				74F0B4F726125798001FDB79 /* AppDelegate.swift in Sources */,
 				74F0B53426125B4B001FDB79 /* InstructionText.swift in Sources */,
@@ -446,14 +470,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = 6V5PK9N25M;
+				DEVELOPMENT_TEAM = 988U7K63MN;
 				INFOPLIST_FILE = multiIdentify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Soren-Andersen.WalkThru";
+				PRODUCT_BUNDLE_IDENTIFIER = "Claire-Andersen.WalkThru";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -467,14 +491,14 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = 6V5PK9N25M;
+				DEVELOPMENT_TEAM = 988U7K63MN;
 				INFOPLIST_FILE = multiIdentify/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "Soren-Andersen.WalkThru";
+				PRODUCT_BUNDLE_IDENTIFIER = "Claire-Andersen.WalkThru";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
