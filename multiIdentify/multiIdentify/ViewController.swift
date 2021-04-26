@@ -29,25 +29,28 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     fileprivate let highlightMaskValue: Int = 2
     var infoList:[[ImageInfo]]!
 
+    @IBOutlet weak var progressBar: UIProgressView!
     @IBAction func nextsStep(_ sender: Any) {
+        stepNum -= 1 //Go to next step
+    
+        if stepNum < MIN_STEP_NUM {
+            stepNum = MAX_STEP_NUM - 1
+        }
+        sessionConfig() //restart AR session due to change in step
+    }
+ 
+    @IBAction func prevsStep(_ sender: Any) {
         stepNum += 1 //Go to next step
         if stepNum > MAX_STEP_NUM - 1{
             stepNum = MIN_STEP_NUM
         }
         sessionConfig() //restart AR session due to change in step
     }
-
-    @IBAction func prevsStep(_ sender: Any) {
-    stepNum -= 1 //Go to Previous Step
-    if stepNum < MIN_STEP_NUM {
-        stepNum = MAX_STEP_NUM - 1
-    }
-    sessionConfig() //restart AR session due to change in step
-}
-    @IBOutlet weak var Instructions: UILabel!
+    
     
     @IBOutlet var sceneView: ARSCNView!
 
+    @IBOutlet weak var Instructions: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     var MAX_STEP_NUM = 10 //Full amount of steps in process
     let MIN_STEP_NUM = 1 //Minimum Step number (Should probably be one)
@@ -74,7 +77,8 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         hardCodeType = "airFilter"
 
         stepList = stepSetup(MAX_STEP_NUM: MAX_STEP_NUM) //init steplist
-
+        let floatHoldr = Float(stepNum / (MAX_STEP_NUM - 1))
+        progressBar.setProgress(floatHoldr, animated: false)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -84,8 +88,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
         sessionConfig()
     }
-    
+
     func sessionConfig(){
+
         let configuration = ARWorldTrackingConfiguration()
         var NextStep = ARReferenceImage.referenceImages(inGroupNamed: "1_Step_pbj", bundle: Bundle.main)
         configuration.maximumNumberOfTrackedImages = MAX_IMAGES_USED;
@@ -95,6 +100,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
  
         configuration.detectionImages = NextStep //set session to newly selected folder
         sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors]) //reset all image recongition and anchors,
+        
+        progressBar.setProgress(Float(stepNum) / Float(MAX_STEP_NUM - 1), animated: true)
+
+
     }
 
     
