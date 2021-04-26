@@ -49,7 +49,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
 
     @IBOutlet weak var timeLabel: UILabel!
-    var MAX_STEP_NUM = 8 //Full amount of steps in process
+    var MAX_STEP_NUM = 10 //Full amount of steps in process
     let MIN_STEP_NUM = 1 //Minimum Step number (Should probably be one)
     let MAX_IMAGES_USED = 4 //Largest number of pictures used in single step (Based on AR resource group)
     var stepNum = 1 //What Step User is on
@@ -71,7 +71,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.showsStatistics = true
         
         sceneView.autoenablesDefaultLighting = true
-        hardCodeType = "cadoo"
+        hardCodeType = "airFilter"
 
         stepList = stepSetup(MAX_STEP_NUM: MAX_STEP_NUM) //init steplist
 
@@ -199,7 +199,6 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
                     Textnode.scale = SCNVector3(x:0.005, y:0.005, z:-0.005)
                     Textnode.geometry = text
-                    Textnode.eulerAngles.x = -.pi / 2
                     node.addChildNode(Textnode) //add node to list of nodes being used
         
                     if(arrowCheck != "Unknown"){
@@ -212,7 +211,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                             node.addChildNode(Imgnode)
                 
                     }
-                
+
                     if(highlighCheck != "none"){
                         
                                             
@@ -222,10 +221,27 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                                             
                                                 switch shapeCheck {
                                                 case "full":
-                                                    choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.90 , height: imageAnchor.referenceImage.physicalSize.height * 0.90)
+                                                    choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.95 , height: imageAnchor.referenceImage.physicalSize.height * 0.95)
                                                 case "circle":
                                                     choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.80 , height: imageAnchor.referenceImage.physicalSize.height * 0.80)
                                                     choosenSize.cornerRadius = imageAnchor.referenceImage.physicalSize.width
+                                                case "airFilter":
+                                                    var holdr = [SCNPlane]()
+                                                    let hardcoded = [SCNVector3(x:0.127, y:-0.25, z:-0.06), SCNVector3(x:-0.127, y:-0.25, z:-0.06), SCNVector3(x:0.127, y:-0.05, z:-0.06), SCNVector3(x:-0.127, y:-0.05, z:-0.06)]
+                                                    for _ in 0...3 {
+                                                        let airFilterPlane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.40 , height: imageAnchor.referenceImage.physicalSize.height * 0.40)
+                                                        airFilterPlane.firstMaterial?.diffuse.contents =         UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 0.85) /* #00ea07 */
+                                                        holdr.append(airFilterPlane)
+
+                                                    }
+                                                    for i in 0...3 {
+                                                        let airFilterNode = SCNNode(geometry: holdr[i])
+                                                        airFilterNode.position = hardcoded[i]
+                                                        airFilterNode.eulerAngles.x = -.pi / 2
+                                                        
+                                                        node.addChildNode(airFilterNode)
+                                                    }
+
                                                 default:
                                                     choosenSize = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.80 , height: imageAnchor.referenceImage.physicalSize.height * 0.80)
                                                 }
@@ -235,11 +251,13 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                                             
                                                 switch highlighCheck {
                                                 case "green":
-                                                    colorChoosen = UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 0.5) /* #00ea07 */
+                                                    colorChoosen = UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 0.85) /* #00ea07 */
                                                 case "red":
-                                                    colorChoosen = UIColor(hue: 0.0056, saturation: 1, brightness: 0.82, alpha: 0.5) /* #d10600 */
+                                                    colorChoosen = UIColor(hue: 0.0056, saturation: 1, brightness: 0.82, alpha: 0.65) /* #d10600 */
+                                                case "airFilter":
+                                                    colorChoosen = UIColor(hue: 0.0056, saturation: 0.0, brightness: 0.0, alpha: 0.0) /* #d10600 */
                                                 default:
-                                                    colorChoosen = UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 0.5) /* #00ea07 */
+                                                    colorChoosen = UIColor(hue: 0.3389, saturation: 1, brightness: 0.92, alpha: 0.95) /* #00ea07 */
                                                 }
                                             
                                             
@@ -253,6 +271,55 @@ class ViewController: UIViewController, ARSCNViewDelegate {
                             
                                 
                                     
+                    }
+                    else if(shapeCheck == "airFilter"){
+                        
+                                
+                            switch array[2] {
+                            case "corners":
+                                var holdr = [SCNPlane]()
+                                let hardcoded = [SCNVector3(x:0.127, y:-0.25, z:-0.06), SCNVector3(x:-0.127, y:-0.25, z:-0.06), SCNVector3(x:0.127, y:-0.05, z:-0.06), SCNVector3(x:-0.127, y:-0.05, z:-0.06)]
+                                for _ in 0...3 {
+                                    let airFilterPlane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.40 , height: imageAnchor.referenceImage.physicalSize.height * 0.40)
+                                    airFilterPlane.firstMaterial?.diffuse.contents =        UIColor(hue: 0.0056, saturation: 1, brightness: 0.82, alpha: 0.9) /* #d10600 */
+                                    holdr.append(airFilterPlane)
+
+                                }
+                                for i in 0...3 {
+                                    let airFilterNode = SCNNode(geometry: holdr[i])
+                                    airFilterNode.position = hardcoded[i]
+                                    airFilterNode.eulerAngles.x = -.pi / 2
+                                    
+                                    node.addChildNode(airFilterNode)
+                                }
+                            case "left":
+
+                    
+                                    let airFilterPlane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 0.40 , height: imageAnchor.referenceImage.physicalSize.height * 0.70)
+                                    airFilterPlane.firstMaterial?.diffuse.contents = UIColor(hue: 0.0056, saturation: 1, brightness: 0.82, alpha: 0.9) /* #d10600 */
+
+            
+                                    let airFilterNode = SCNNode(geometry: airFilterPlane)
+                                    airFilterNode.position = SCNVector3(x:-0.110, y:-0.25, z:-0.06)
+                                    airFilterNode.eulerAngles.x = -.pi / 2
+                                    
+                                    node.addChildNode(airFilterNode)
+                                
+                            default:
+                                
+                                                let airFilterPlane = SCNPlane(width: imageAnchor.referenceImage.physicalSize.width * 1.0 , height: imageAnchor.referenceImage.physicalSize.height * 1.0)
+                                                airFilterPlane.firstMaterial?.diffuse.contents = UIColor(hue: 1.0, saturation: 1, brightness: 0.82, alpha: 0.9) /* #d10600 */
+
+                        
+                                                let airFilterNode = SCNNode(geometry: airFilterPlane)
+                                                airFilterNode.position = SCNVector3(x:0.0, y:0.0, z:0.0)
+                                                airFilterNode.eulerAngles.x = -.pi / 2
+                                                
+                                                node.addChildNode(airFilterNode)
+                            }
+                        
+                        
+
                     }
 
                 }

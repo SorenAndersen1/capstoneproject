@@ -32,7 +32,7 @@
            "appearText": "Snap clips",
            "arrowDir": "Unknown",
            "imgName": "Air Filter_",
-           "highlightColor":"red_corners"
+           "highlightColor":"none_airFilter_corners"
        }
        ]
     },
@@ -44,7 +44,7 @@
            "appearText": "Snap final clip",
            "arrowDir": "Unknown",
            "imgName": "airfilter_full3",
-           "highlightColor":"red_left"
+           "highlightColor":"none_airFilter_left"
        },
        {
            "appearText": "Below this cord",
@@ -97,14 +97,34 @@
        ]
     },
     {
-       "instructionText":"Close lid and snap on obvious clips",
-       "successText":"3 clips snapped",
-       "itemInfos":[]
+       "instructionText":"Snap closed obvious clips on the bottom and top right",
+       "successText":"One clip remaining",
+       "itemInfos":[
+       {
+           "appearText": "Snap clips",
+           "arrowDir": "Unknown",
+           "imgName": "Air FilterFinal",
+           "highlightColor":"none_airFilter_corners"
+       }
+       ]
     },
     {
-       "instructionText":"Snap close clip under the left hose",
-       "successText":"All clips snapped",
-       "itemInfos":[]
+       "instructionText":"Snap closed clip under left cord",
+       "successText":"All clips closed",
+       "itemInfos":[
+       {
+           "appearText": "Snap final clip",
+           "arrowDir": "Unknown",
+           "imgName": "airfilter_fullFinal",
+           "highlightColor":"none_airFilter_left"
+       },
+       {
+           "appearText": "Below this cord",
+           "arrowDir": "down",
+           "imgName": "cordFinal",
+           "highlightColor":"green_full"
+       }
+       ]
     },
     {
        "instructionText":"Close hood",
