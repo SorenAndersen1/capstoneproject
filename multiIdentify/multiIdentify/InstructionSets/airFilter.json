@@ -2,10 +2,10 @@
     "instructions":[
     {
        "instructionText":"Identify hood",
-       "successText":"Open car hood",
+       "successText":"Correct Model Identified, you may open the hood",
        "itemInfos":[
        {
-           "appearText": "Open hood",
+           "appearText": "none",
            "arrowDir": "up",
            "imgName": "kiaHood",
            "highlightColor":"green_full"
@@ -26,7 +26,7 @@
     },
     {
        "instructionText":"Snap open obvious clips on the bottom and top right",
-       "successText":"One clip remaining",
+       "successText":"Snap open highlighted clips",
        "itemInfos":[
        {
            "appearText": "Snap clips",
@@ -38,7 +38,7 @@
     },
     {
        "instructionText":"Snap open clip under left cord",
-       "successText":"All clips released",
+       "successText":"Snap open highlighted clip under cord",
        "itemInfos":[
        {
            "appearText": "Snap final clip",
@@ -98,19 +98,19 @@
     },
     {
        "instructionText":"Snap closed obvious clips on the bottom and top right",
-       "successText":"One clip remaining",
+       "successText":"Snap close highlighted clips",
        "itemInfos":[
        {
            "appearText": "Snap clips",
            "arrowDir": "Unknown",
-           "imgName": "Air FilterFinal",
+           "imgName": "Air FilterClip",
            "highlightColor":"none_airFilter_corners"
        }
        ]
     },
     {
-       "instructionText":"Snap closed clip under left cord",
-       "successText":"All clips closed",
+       "instructionText":"Snap close clip under left cord",
+       "successText":"Snap close highlighted clip",
        "itemInfos":[
        {
            "appearText": "Snap final clip",
