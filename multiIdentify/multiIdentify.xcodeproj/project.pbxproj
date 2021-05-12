@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		74D0D3C5264B3E94005C18EE /* LibraryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74D0D3C4264B3E94005C18EE /* LibraryTableViewController.swift */; };
 		74F0B4F726125798001FDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0B4F626125798001FDB79 /* AppDelegate.swift */; };
 		74F0B4F926125798001FDB79 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F0B4F826125798001FDB79 /* art.scnassets */; };
 		74F0B4FE26125798001FDB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F0B4FC26125798001FDB79 /* Main.storyboard */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		74D0D3C4264B3E94005C18EE /* LibraryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryTableViewController.swift; sourceTree = "<group>"; };
 		74F0B4F326125798001FDB79 /* multiIdentify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiIdentify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F0B4F626125798001FDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F0B4F826125798001FDB79 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 		74F0B4EA26125798001FDB79 = {
 			isa = PBXGroup;
 			children = (
+				74D0D3C4264B3E94005C18EE /* LibraryTableViewController.swift */,
 				74F53B1D264B16E800DDB0E5 /* CreateController.swift */,
 				74F0B4F526125798001FDB79 /* multiIdentify */,
 				74F0B50C26125799001FDB79 /* multiIdentifyTests */,
@@ -303,6 +306,7 @@
 				74F53B1E264B16E800DDB0E5 /* CreateController.swift in Sources */,
 				C378D1A22633BD1D008DB6E1 /* JsonDecode.swift in Sources */,
 				74F0B52F261257D4001FDB79 /* Step.swift in Sources */,
+				74D0D3C5264B3E94005C18EE /* LibraryTableViewController.swift in Sources */,
 				74F0B4F726125798001FDB79 /* AppDelegate.swift in Sources */,
 				74F0B53426125B4B001FDB79 /* InstructionText.swift in Sources */,
 			);

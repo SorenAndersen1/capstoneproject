@@ -8,15 +8,41 @@
 import UIKit
 
 class libraryViewController: UIViewController {
+    var buttonPressed:String = ""
 
-    @IBOutlet weak var libraryLabel: UILabel!
+
+    @IBSegueAction func arSegue(_ coder: NSCoder) -> ArViewController? {
+        return ArViewController(coder: coder)
+    }
+    @IBAction func pbjSegue(_ sender: Any) {
+        buttonPressed = "pbj"
+        performSegue(withIdentifier: "arSegue",
+                   sender: self)
+    }
+    @IBAction func cadooSegue(_ sender: Any) {
+        buttonPressed = "cadoo"
+        performSegue(withIdentifier: "arSegue",
+                   sender: self)
+    }
+    @IBAction func airFilterSegue(_ sender: Any) {
+        buttonPressed = "airFilter"
+        performSegue(withIdentifier: "arSegue",
+                   sender: self)
+    }
+    @IBSegueAction func airFilterARSegue(_ coder: NSCoder) -> ArViewController? {
+        return ArViewController(coder: coder)
+    }
+    @IBSegueAction func createSegue(_ coder: NSCoder) -> UIViewController? {
+        return UIViewController(coder: coder)
+    }
     @IBOutlet weak var createButton: UIButton!
-    @IBOutlet weak var recycleView: UICollectionView!
+
+    @IBOutlet weak var pbj: UIView!
+    @IBOutlet weak var cadoo: UIView!
+    @IBOutlet weak var airFilter: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+         }
     
 
     /*
@@ -28,5 +54,10 @@ class libraryViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
-
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let vc = segue.destination as? ArViewController {
+            vc.hardCodeType = buttonPressed
+        }
+    }
 }
+            
