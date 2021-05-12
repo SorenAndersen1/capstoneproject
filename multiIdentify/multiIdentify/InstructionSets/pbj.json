@@ -1,0 +1,112 @@
+{
+    "instructions":[
+    {
+       "instructionText":"Identify Bread",
+       "successText":"Delicious bread, good choice!",
+       "itemInfos":[
+       {
+           "appearText": "Open Bread",
+           "arrowDir": "Unknown",
+           "imgName": "breadbag",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take 2 slices of bread out, identify one",
+       "successText":"Bread in spreadable position",
+       "itemInfos":[
+       {
+           "appearText": "Place bread",
+           "arrowDir": "down",
+           "imgName": "bread",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Open Peanutbutter and Jelly containers",
+       "successText":"Spreads readied",
+       "itemInfos":[
+       {
+           "appearText": "Spin Lid right",
+           "arrowDir": "right",
+           "imgName": "canLid",
+           "highlightColor":"red_circle"
+       },
+       {
+           "appearText": "Open Jar",
+           "arrowDir": "down",
+           "imgName": "jamJar",
+           "highlightColor":"red_full"
+       },
+       {
+           "appearText": "Open Jar",
+           "arrowDir": "down",
+           "imgName": "pb",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Spin Lid right",
+           "arrowDir": "right",
+           "imgName": "pbLid",
+           "highlightColor":"green_circle"
+       }
+       ]
+    },
+    {
+       "instructionText":"Use knife to spread evenly on each slice of bread",
+       "successText":"Spreads applied",
+       "itemInfos":[
+       {
+           "appearText": "Jam spread",
+           "arrowDir": "Unknown",
+           "imgName": "pbBread",
+           "highlightColor":"red_full"
+       },
+       {
+           "appearText": "PB spread",
+           "arrowDir": "Unknown",
+           "imgName": "jam_bread",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take peanutbutter spread side and place on top of jelly side",
+       "successText":"Sandwich constructed, good job!",
+       "itemInfos":[
+       {
+           "appearText": "Finished sandwich",
+           "arrowDir": "Unknown",
+           "imgName": "sandwich",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Grab sandwich bags",
+       "successText":"Open bag using zipper",
+       "itemInfos":[
+       {
+           "appearText": "Take Out Bag",
+           "arrowDir": "Unknown",
+           "imgName": "ziploc",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Place sandwich inside of bag",
+       "successText":"Congrats you have lunch!",
+       "itemInfos":[
+       {
+           "appearText": "Complete sandwich!",
+           "arrowDir": "down",
+           "imgName": "bagged",
+           "highlightColor":"green_full"
+       }
+       ]
+    }
+    ]
+}
