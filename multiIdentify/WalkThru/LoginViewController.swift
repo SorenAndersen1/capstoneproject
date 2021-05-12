@@ -4,14 +4,24 @@
 //
 //  Created by user183837 on 5/11/21.
 //
-
 import UIKit
+import Foundation
+//import Parse
 
 class LoginViewController: UIViewController {
     var passwordList: [String]  = ["nowlen", "soren", "claire"]
     var usernameList: [String]  = ["webbjos", "andesore", "swanscol"]
 
 
+    @IBAction func signUpClick(_ sender: Any) {
+        if ( usernameList.contains(usernameText.text ?? "andesore") == false && passwordText.text != nil ){
+            usernameList.append(usernameText.text ?? "error")
+            passwordList.append(passwordText.text ?? "error")
+        }
+        else{
+            self.showToast(message: "Error Signing up", font: .systemFont(ofSize: 12.0))
+        }
+    }
     @IBOutlet weak var usernameText: UITextField!
     
     @IBSegueAction func login(_ coder: NSCoder) -> libraryViewController? {
@@ -51,7 +61,41 @@ class LoginViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    /*
+    func registerUser() {
+        // initialize a user object
+        let newUser = PFUser()
+        
+        // set user properties
+        newUser.username = usernameText.text
+        newUser.password = passwordText.text
+        
+        // call sign up function on the object
+        newUser.signUpInBackground { (success: Bool, error: Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                print("User Registered successfully")
+                // manually segue to logged in view
+            }
+        }
+    }
+    func loginUser() {
 
+       let username = usernameText.text ?? ""
+       let password = passwordText.text ?? ""
+
+       PFUser.logInWithUsername(inBackground: username, password: password) { (user: PFUser?, error: Error?) in
+            if let error = error {
+              print("User log in failed: \(error.localizedDescription)")
+            } else {
+              print("User logged in successfully")
+                self.performSegue(withIdentifier: "librarySegue", sender: username)
+                
+            }
+         }
+    }
+ */
 }
 extension UIViewController {
 

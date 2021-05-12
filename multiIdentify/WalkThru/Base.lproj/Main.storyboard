@@ -6,6 +6,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17126"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -85,7 +86,7 @@
         <!--Library View Controller-->
         <scene sceneID="F4a-fm-m5t">
             <objects>
-                <viewController storyboardIdentifier="libraryView" id="LIE-DA-wbZ" customClass="libraryViewController" customModule="multiIdentify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="libraryView" id="LIE-DA-wbZ" customClass="libraryViewController" customModule="WalkThru" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fRK-O7-HA3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -148,7 +149,8 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xp8-c3-mQh">
                                         <rect key="frame" x="8" y="33" width="340" height="32"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Instruction Description: Replace a tired air filter for your 2007 Kia Rondo! No tools nessecary, only new air filter.</string>
+                                        <string key="text">Instruction Description: Replace a tired air filter for your 
+2007 Kia Rondo! No tools nessecary, only new air filter.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -207,7 +209,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rQP-Je-T9t">
                                         <rect key="frame" x="8" y="33" width="688" height="59"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Instruction Description: First time playing cadoo? No problem! This guide instructs you on how to setup Cadoo Deluxe Edition.</string>
+                                        <string key="text">Instruction Description: First time playing cadoo? 
+No problem! This guide instructs you on how to setup 
+Cadoo Deluxe Edition.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -266,7 +270,9 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZKJ-GR-krP">
                                         <rect key="frame" x="8" y="33" width="359" height="58"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <string key="text">Instruction Description: Make a delicious peanut butterand jelly sandwich. Requires: Plate, Bread, Jelly,and peanut butter.</string>
+                                        <string key="text">Instruction Description: Make a delicious peanut butter
+and jelly sandwich. Requires: Plate, Bread, Jelly,
+and peanut butter.</string>
                                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -302,10 +308,107 @@
             </objects>
             <point key="canvasLocation" x="984.79999999999995" y="27.436281859070466"/>
         </scene>
+        <!--Lib Collection View Controller-->
+        <scene sceneID="FVq-xt-079">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5T8-ep-OyN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <collectionViewController id="dI2-dz-KA9" customClass="LibCollectionViewController" customModule="WalkThru" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="cLp-ZV-XjS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iBc-N7-hZc">
+                            <size key="itemSize" width="374" height="165"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="1UN-M4-Qnf">
+                                <rect key="frame" x="0.5" y="0.0" width="374" height="165"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="FcU-NL-xVV">
+                                    <rect key="frame" x="0.0" y="0.0" width="374" height="165"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SBE-Zd-tIX">
+                                            <rect key="frame" x="-0.5" y="8" width="375" height="149"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hn2-Uw-SBG" userLabel="1 Star Rating">
+                                                    <rect key="frame" x="5" y="100" width="46" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oIH-HV-P55" userLabel="2 Star Rating">
+                                                    <rect key="frame" x="50" y="100" width="46" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qKp-go-llN" userLabel="3 Star Rating">
+                                                    <rect key="frame" x="95" y="100" width="47" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OWU-Ps-SJg" userLabel="4 Star Rating">
+                                                    <rect key="frame" x="165" y="65" width="46" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </button>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ds9-Kx-Ord" userLabel="5 Star Rating">
+                                                    <rect key="frame" x="187" y="100" width="45" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </button>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="1StarRating" translatesAutoresizingMaskIntoConstraints="NO" id="dJv-1l-DBL" userLabel="Rating Image">
+                                                    <rect key="frame" x="0.0" y="100" width="236" height="45"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yq9-FT-bpi" userLabel="Instruction Set Button">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" backgroundImage="Rectangle 3"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="20"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="airFilterSegue:" destination="LIE-DA-wbZ" eventType="touchUpInside" id="il7-08-hDe"/>
+                                                    </connections>
+                                                </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Air Filter Replacement: 2007 Kia Rondo " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6JB-Ej-9Pw" userLabel="title">
+                                                    <rect key="frame" x="8" y="0.0" width="359" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" lineBreakMode="wordWrap" numberOfLines="5" baselineAdjustment="alignBaselines" highlighted="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IRY-xj-Pxc">
+                                                    <rect key="frame" x="8" y="33" width="340" height="32"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <string key="text">Instruction Description: Replace a tired air filter for your 
+2007 Kia Rondo! No tools nessecary, only new air filter.</string>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        </view>
+                                    </subviews>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="374" height="165"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="dI2-dz-KA9" id="INB-u0-iv9"/>
+                            <outlet property="delegate" destination="dI2-dz-KA9" id="0ne-Lo-c9W"/>
+                        </connections>
+                    </collectionView>
+                </collectionViewController>
+            </objects>
+            <point key="canvasLocation" x="1031.2" y="1264.3178410794603"/>
+        </scene>
         <!--Login-->
         <scene sceneID="104-9H-qF9">
             <objects>
-                <viewController id="z7j-HQ-fra" customClass="LoginViewController" customModule="multiIdentify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="z7j-HQ-fra" customClass="LoginViewController" customModule="WalkThru" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="aG8-Dg-7Oc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -329,6 +432,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Sign-up"/>
                                 <connections>
+                                    <action selector="signUpClick:" destination="z7j-HQ-fra" eventType="touchUpInside" id="Gdy-Rx-N0R"/>
                                     <segue destination="LIE-DA-wbZ" kind="show" identifier="librarySegue" destinationCreationSelector="tempSegue:" id="DvC-H7-ihJ"/>
                                 </connections>
                             </button>

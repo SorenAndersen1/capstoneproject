@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		7400EA96264B7471001027E0 /* arViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7400EA95264B7471001027E0 /* arViewController.swift */; };
+		74859863264C5BB60012422A /* LibCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74859862264C5BB60012422A /* LibCollectionViewController.swift */; };
+		74859889264C662C0012422A /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 74859888264C662C0012422A /* Podfile */; };
 		74F0B4F726125798001FDB79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F0B4F626125798001FDB79 /* AppDelegate.swift */; };
 		74F0B4F926125798001FDB79 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F0B4F826125798001FDB79 /* art.scnassets */; };
 		74F0B4FE26125798001FDB79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F0B4FC26125798001FDB79 /* Main.storyboard */; };
@@ -44,17 +46,19 @@
 
 /* Begin PBXFileReference section */
 		7400EA95264B7471001027E0 /* arViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = arViewController.swift; path = "../../../../Downloads/capstoneproject-NowlenBranch-3/images/general/arViewController.swift"; sourceTree = "<group>"; };
-		74F0B4F326125798001FDB79 /* multiIdentify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = multiIdentify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		743470EA264C9D0200F87483 /* WalkThru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkThru.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		74859862264C5BB60012422A /* LibCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LibCollectionViewController.swift; path = "../../../WalkThru Final/WalkThru/WalkThru/LibCollectionViewController.swift"; sourceTree = "<group>"; };
+		74859888264C662C0012422A /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = SOURCE_ROOT; };
 		74F0B4F626125798001FDB79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F0B4F826125798001FDB79 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		74F0B4FD26125798001FDB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		74F0B4FF26125799001FDB79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74F0B50226125799001FDB79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		74F0B50426125799001FDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74F0B50926125799001FDB79 /* multiIdentifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = multiIdentifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F0B50926125799001FDB79 /* WalkThruTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WalkThruTests.xctest; path = "/Users/user183837/Documents/finalproject/multiIdentify/build/Debug-iphoneos/WalkThruTests.xctest"; sourceTree = "<absolute>"; };
 		74F0B50D26125799001FDB79 /* multiIdentifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiIdentifyTests.swift; sourceTree = "<group>"; };
 		74F0B50F26125799001FDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		74F0B51426125799001FDB79 /* multiIdentifyUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = multiIdentifyUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		74F0B51426125799001FDB79 /* WalkThruUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = WalkThruUITests.xctest; path = "/Users/user183837/Documents/finalproject/multiIdentify/build/Debug-iphoneos/WalkThruUITests.xctest"; sourceTree = "<absolute>"; };
 		74F0B51826125799001FDB79 /* multiIdentifyUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = multiIdentifyUITests.swift; sourceTree = "<group>"; };
 		74F0B51A26125799001FDB79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		74F0B52D261257D4001FDB79 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
@@ -95,24 +99,14 @@
 		74F0B4EA26125798001FDB79 = {
 			isa = PBXGroup;
 			children = (
-				74F0B4F526125798001FDB79 /* multiIdentify */,
-				74F0B50C26125799001FDB79 /* multiIdentifyTests */,
-				74F0B51726125799001FDB79 /* multiIdentifyUITests */,
-				74F0B4F426125798001FDB79 /* Products */,
+				74F0B4F526125798001FDB79 /* WalkThru */,
+				74F0B50C26125799001FDB79 /* WalkThruTests */,
+				74F0B51726125799001FDB79 /* WalkThruUITests */,
+				743470EA264C9D0200F87483 /* WalkThru.app */,
 			);
 			sourceTree = "<group>";
 		};
-		74F0B4F426125798001FDB79 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				74F0B4F326125798001FDB79 /* multiIdentify.app */,
-				74F0B50926125799001FDB79 /* multiIdentifyTests.xctest */,
-				74F0B51426125799001FDB79 /* multiIdentifyUITests.xctest */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		74F0B4F526125798001FDB79 /* multiIdentify */ = {
+		74F0B4F526125798001FDB79 /* WalkThru */ = {
 			isa = PBXGroup;
 			children = (
 				C378D1AB26349440008DB6E1 /* InstructionSets */,
@@ -123,36 +117,38 @@
 				74F0B4FF26125799001FDB79 /* Assets.xcassets */,
 				74F0B50126125799001FDB79 /* LaunchScreen.storyboard */,
 				74F0B50426125799001FDB79 /* Info.plist */,
+				74859862264C5BB60012422A /* LibCollectionViewController.swift */,
 				74F53B13264B164600DDB0E5 /* libraryViewController.swift */,
 				7400EA95264B7471001027E0 /* arViewController.swift */,
 				74F53B00264B132D00DDB0E5 /* LoginViewController.swift */,
 				74F0B53326125B4B001FDB79 /* InstructionText.swift */,
 				C378D1A12633BD1D008DB6E1 /* JsonDecode.swift */,
 			);
-			path = multiIdentify;
+			path = WalkThru;
 			sourceTree = "<group>";
 		};
-		74F0B50C26125799001FDB79 /* multiIdentifyTests */ = {
+		74F0B50C26125799001FDB79 /* WalkThruTests */ = {
 			isa = PBXGroup;
 			children = (
 				74F0B50D26125799001FDB79 /* multiIdentifyTests.swift */,
 				74F0B50F26125799001FDB79 /* Info.plist */,
 			);
-			path = multiIdentifyTests;
+			path = WalkThruTests;
 			sourceTree = "<group>";
 		};
-		74F0B51726125799001FDB79 /* multiIdentifyUITests */ = {
+		74F0B51726125799001FDB79 /* WalkThruUITests */ = {
 			isa = PBXGroup;
 			children = (
 				74F0B51826125799001FDB79 /* multiIdentifyUITests.swift */,
 				74F0B51A26125799001FDB79 /* Info.plist */,
 			);
-			path = multiIdentifyUITests;
+			path = WalkThruUITests;
 			sourceTree = "<group>";
 		};
 		C378D1AB26349440008DB6E1 /* InstructionSets */ = {
 			isa = PBXGroup;
 			children = (
+				74859888264C662C0012422A /* Podfile */,
 				C378D1AC26349455008DB6E1 /* cadoo.json */,
 				C378D1B4263496E8008DB6E1 /* pbj.json */,
 				C378D1BC263498B9008DB6E1 /* airFilter.json */,
@@ -163,9 +159,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		74F0B4F226125798001FDB79 /* multiIdentify */ = {
+		74F0B4F226125798001FDB79 /* WalkThru */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74F0B51D26125799001FDB79 /* Build configuration list for PBXNativeTarget "multiIdentify" */;
+			buildConfigurationList = 74F0B51D26125799001FDB79 /* Build configuration list for PBXNativeTarget "WalkThru" */;
 			buildPhases = (
 				74F0B4EF26125798001FDB79 /* Sources */,
 				74F0B4F026125798001FDB79 /* Frameworks */,
@@ -175,14 +171,14 @@
 			);
 			dependencies = (
 			);
-			name = multiIdentify;
+			name = WalkThru;
 			productName = multiIdentify;
-			productReference = 74F0B4F326125798001FDB79 /* multiIdentify.app */;
+			productReference = 743470EA264C9D0200F87483 /* WalkThru.app */;
 			productType = "com.apple.product-type.application";
 		};
-		74F0B50826125799001FDB79 /* multiIdentifyTests */ = {
+		74F0B50826125799001FDB79 /* WalkThruTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74F0B52026125799001FDB79 /* Build configuration list for PBXNativeTarget "multiIdentifyTests" */;
+			buildConfigurationList = 74F0B52026125799001FDB79 /* Build configuration list for PBXNativeTarget "WalkThruTests" */;
 			buildPhases = (
 				74F0B50526125799001FDB79 /* Sources */,
 				74F0B50626125799001FDB79 /* Frameworks */,
@@ -193,14 +189,14 @@
 			dependencies = (
 				74F0B50B26125799001FDB79 /* PBXTargetDependency */,
 			);
-			name = multiIdentifyTests;
+			name = WalkThruTests;
 			productName = multiIdentifyTests;
-			productReference = 74F0B50926125799001FDB79 /* multiIdentifyTests.xctest */;
+			productReference = 74F0B50926125799001FDB79 /* WalkThruTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		74F0B51326125799001FDB79 /* multiIdentifyUITests */ = {
+		74F0B51326125799001FDB79 /* WalkThruUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 74F0B52326125799001FDB79 /* Build configuration list for PBXNativeTarget "multiIdentifyUITests" */;
+			buildConfigurationList = 74F0B52326125799001FDB79 /* Build configuration list for PBXNativeTarget "WalkThruUITests" */;
 			buildPhases = (
 				74F0B51026125799001FDB79 /* Sources */,
 				74F0B51126125799001FDB79 /* Frameworks */,
@@ -211,9 +207,9 @@
 			dependencies = (
 				74F0B51626125799001FDB79 /* PBXTargetDependency */,
 			);
-			name = multiIdentifyUITests;
+			name = WalkThruUITests;
 			productName = multiIdentifyUITests;
-			productReference = 74F0B51426125799001FDB79 /* multiIdentifyUITests.xctest */;
+			productReference = 74F0B51426125799001FDB79 /* WalkThruUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -238,7 +234,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 74F0B4EE26125798001FDB79 /* Build configuration list for PBXProject "multiIdentify" */;
+			buildConfigurationList = 74F0B4EE26125798001FDB79 /* Build configuration list for PBXProject "WalkThru" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -247,13 +243,13 @@
 				Base,
 			);
 			mainGroup = 74F0B4EA26125798001FDB79;
-			productRefGroup = 74F0B4F426125798001FDB79 /* Products */;
+			productRefGroup = 74F0B4EA26125798001FDB79;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				74F0B4F226125798001FDB79 /* multiIdentify */,
-				74F0B50826125799001FDB79 /* multiIdentifyTests */,
-				74F0B51326125799001FDB79 /* multiIdentifyUITests */,
+				74F0B4F226125798001FDB79 /* WalkThru */,
+				74F0B50826125799001FDB79 /* WalkThruTests */,
+				74F0B51326125799001FDB79 /* WalkThruUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,6 +264,7 @@
 				C378D1B5263496E8008DB6E1 /* pbj.json in Resources */,
 				74F0B50326125799001FDB79 /* LaunchScreen.storyboard in Resources */,
 				C378D1AD26349455008DB6E1 /* cadoo.json in Resources */,
+				74859889264C662C0012422A /* Podfile in Resources */,
 				74F0B50026125799001FDB79 /* Assets.xcassets in Resources */,
 				74F0B4FE26125798001FDB79 /* Main.storyboard in Resources */,
 			);
@@ -294,6 +291,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74859863264C5BB60012422A /* LibCollectionViewController.swift in Sources */,
 				74F53B01264B132D00DDB0E5 /* LoginViewController.swift in Sources */,
 				74F53B14264B164600DDB0E5 /* libraryViewController.swift in Sources */,
 				7400EA96264B7471001027E0 /* arViewController.swift in Sources */,
@@ -325,12 +323,12 @@
 /* Begin PBXTargetDependency section */
 		74F0B50B26125799001FDB79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74F0B4F226125798001FDB79 /* multiIdentify */;
+			target = 74F0B4F226125798001FDB79 /* WalkThru */;
 			targetProxy = 74F0B50A26125799001FDB79 /* PBXContainerItemProxy */;
 		};
 		74F0B51626125799001FDB79 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 74F0B4F226125798001FDB79 /* multiIdentify */;
+			target = 74F0B4F226125798001FDB79 /* WalkThru */;
 			targetProxy = 74F0B51526125799001FDB79 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -477,14 +475,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6V5PK9N25M;
-				INFOPLIST_FILE = multiIdentify/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WalkThru/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Soren-Andersen.WalkThru";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -498,14 +497,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 17;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 6V5PK9N25M;
-				INFOPLIST_FILE = multiIdentify/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/WalkThru/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "Soren-Andersen.WalkThru";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -530,7 +530,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/multiIdentify.app/multiIdentify";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkThru.app/WalkThru";
 			};
 			name = Debug;
 		};
@@ -551,7 +551,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/multiIdentify.app/multiIdentify";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WalkThru.app/WalkThru";
 			};
 			name = Release;
 		};
@@ -596,7 +596,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		74F0B4EE26125798001FDB79 /* Build configuration list for PBXProject "multiIdentify" */ = {
+		74F0B4EE26125798001FDB79 /* Build configuration list for PBXProject "WalkThru" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F0B51B26125799001FDB79 /* Debug */,
@@ -605,7 +605,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74F0B51D26125799001FDB79 /* Build configuration list for PBXNativeTarget "multiIdentify" */ = {
+		74F0B51D26125799001FDB79 /* Build configuration list for PBXNativeTarget "WalkThru" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F0B51E26125799001FDB79 /* Debug */,
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74F0B52026125799001FDB79 /* Build configuration list for PBXNativeTarget "multiIdentifyTests" */ = {
+		74F0B52026125799001FDB79 /* Build configuration list for PBXNativeTarget "WalkThruTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F0B52126125799001FDB79 /* Debug */,
@@ -623,7 +623,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		74F0B52326125799001FDB79 /* Build configuration list for PBXNativeTarget "multiIdentifyUITests" */ = {
+		74F0B52326125799001FDB79 /* Build configuration list for PBXNativeTarget "WalkThruUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				74F0B52426125799001FDB79 /* Debug */,
