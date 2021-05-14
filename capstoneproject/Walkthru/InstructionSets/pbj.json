@@ -1,0 +1,100 @@
+{
+    "instructions":[
+    {
+       "instructionText":"Identify Bread",
+       "successText":"Delicious bread, good choice!",
+       "itemInfos":[
+       {
+           "appearText": "Open Bread",
+           "arrowDir": "Unknown",
+           "imgName": "bread",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Identify Plate",
+       "successText":"Place Bread in the highlighted positions",
+       "itemInfos":[
+       {
+           "appearText": "Place bread",
+           "arrowDir": "down",
+           "imgName": "plate",
+           "highlightColor":"none_airFilter_plate"
+       }
+       ]
+    },
+    {
+       "instructionText":"Open Peanutbutter and Jelly containers",
+       "successText":"Use a knife to spread each evenly on bread",
+       "itemInfos":[
+       {
+           "appearText": "Spin Lid right",
+           "arrowDir": "right",
+           "imgName": "canLid",
+           "highlightColor":"red_circle"
+       },
+       {
+           "appearText": "Open Jar",
+           "arrowDir": "Unknown",
+           "imgName": "jamJar",
+           "highlightColor":"red_full"
+       },
+       {
+           "appearText": "Open Jar of Jif",
+           "arrowDir": "Unknown",
+           "imgName": "jifLabel",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Spin Lid right",
+           "arrowDir": "right",
+           "imgName": "jifLid",
+           "highlightColor":"green_circle"
+       },
+       {
+           "appearText": "Open Jar of Skippy",
+           "arrowDir": "Unknown",
+           "imgName": "skippLabel",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Spin Lid right",
+           "arrowDir": "right",
+           "imgName": "skippyCap",
+           "highlightColor":"green_circle"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take peanutbutter spread side and place on top of jelly side",
+       "successText":"Sandwich constructed, good job!",
+       "itemInfos":[
+       {
+           "appearText": "Finished sandwich",
+           "arrowDir": "Unknown",
+           "imgName": "breadPiece",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Optional: Place sandwich inside of bag",
+       "successText":"Congrats you have lunch!",
+       "itemInfos":[
+       {
+           "appearText": "Complete sandwich!",
+           "arrowDir": "down",
+           "imgName": "breadPiece1",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": " Use Bags",
+           "arrowDir": "Unknown",
+           "imgName": "ziploc",
+           "highlightColor":"green_full"
+       }
+       ]
+    }
+    ]
+}
