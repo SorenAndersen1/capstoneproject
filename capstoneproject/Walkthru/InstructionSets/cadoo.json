@@ -1,0 +1,154 @@
+{
+    "instructions":[
+    {
+       "instructionText":"Identify box",
+       "successText":"Cadoo Deluxe Edition",
+       "itemInfos":[
+       {
+           "appearText": "Cadoo Box",
+           "arrowDir": "down",
+           "imgName": "cadooBox",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Identify board",
+       "successText":"Place board on table",
+       "itemInfos":[
+       {
+           "appearText": "Fold out",
+           "arrowDir": "right",
+           "imgName": "foldOut",
+           "highlightColor":"red_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Fold board out so playing side is visible",
+       "successText":"Board correctly positioned",
+       "itemInfos":[
+       {
+           "appearText": "none",
+           "arrowDir": "Unknown",
+           "imgName": "board",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take notepads out and set by oppisite corners of the board",
+       "successText":"Notepads found",
+       "itemInfos":[
+       {
+           "appearText": "none",
+           "arrowDir": "Unknown",
+           "imgName": "board1",
+           "highlightColor":"none_airFilter_corner"
+       },
+       {
+           "appearText": "Notepad",
+           "arrowDir": "Unknown",
+           "imgName": "notepad1",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Notepad",
+           "arrowDir": "Unknown",
+           "imgName": "notepad2",
+           "highlightColor":"red_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Remove all 4 sets of pieces and place one each side of gameboard",
+       "successText":"Set pieces in coresponding zone",
+       "itemInfos":[
+       {
+           "appearText": "none",
+           "arrowDir": "Unknown",
+           "imgName": "board2",
+           "highlightColor":"none_airFilter_cardinal"
+       },
+       {
+           "appearText": "Pieces still in",
+           "arrowDir": "Unknown",
+           "imgName": "emptierBox",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Pieces Placed",
+           "arrowDir": "Unknown",
+           "imgName": "semiFullbox",
+           "highlightColor":"red_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take boxes of cards reading 'Solo' and 'Combo' out",
+       "successText":"Place card Boxes in highlighted areas",
+       "itemInfos":[
+        {
+               "appearText": "none",
+               "arrowDir": "Unknown",
+               "imgName": "cadooBoard",
+               "highlightColor":"none_airFilter_box"
+       },
+       {
+           "appearText": "Combo Cards",
+           "arrowDir": "Unknown",
+           "imgName": "combo",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Solo Cards",
+           "arrowDir": "Unknown",
+           "imgName": "solo",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Remove timer and clay and place off to the side",
+       "successText":"The board is almost ready!",
+       "itemInfos":[
+        {
+               "appearText": "none",
+               "arrowDir": "Unknown",
+               "imgName": "boardOfCadoo",
+               "highlightColor":"none_airFilter_misc"
+       },
+       {
+           "appearText": "Clay",
+           "arrowDir": "Unknown",
+           "imgName": "clay",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Empty box",
+           "arrowDir": "Unknown",
+           "imgName": "emptyBox",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Glasses",
+           "arrowDir": "Unknown",
+           "imgName": "glasses",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"If highlighted the board is set up",
+       "successText":"Congrats! Have fun playing Cadoo!",
+       "itemInfos":[
+       {
+           "appearText": "Finished Board!",
+           "arrowDir": "down",
+           "imgName": "finishedBoard",
+           "highlightColor":"green_full"
+       }
+       ]
+    }
+    ]
+}
