@@ -1,0 +1,26 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "canLid.arreferenceimage"
+    },
+    {
+      "filename" : "jamjar.arreferenceimage"
+    },
+    {
+      "filename" : "jifCap.arreferenceimage"
+    },
+    {
+      "filename" : "jifLabel.arreferenceimage"
+    },
+    {
+      "filename" : "skippyCap.arreferenceimage"
+    },
+    {
+      "filename" : "skippyLabel.arreferenceimage"
+    }
+  ]
+}

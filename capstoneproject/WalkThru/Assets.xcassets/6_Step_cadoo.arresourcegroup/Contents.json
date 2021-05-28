@@ -1,0 +1,17 @@
+{
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "resources" : [
+    {
+      "filename" : "cadooBoard.arreferenceimage"
+    },
+    {
+      "filename" : "combo.arreferenceimage"
+    },
+    {
+      "filename" : "solo.arreferenceimage"
+    }
+  ]
+}
