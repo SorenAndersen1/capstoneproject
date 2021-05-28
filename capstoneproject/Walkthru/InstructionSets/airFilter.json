@@ -8,7 +8,9 @@
            "appearText": "none",
            "arrowDir": "Unknown",
            "imgName": "kiaHood",
-           "highlightColor":"none_full"
+           "highlightColor":"none_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -20,7 +22,9 @@
            "appearText": "Found Air Filter",
            "arrowDir": "down",
            "imgName": "Air Filter",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -32,7 +36,9 @@
            "appearText": "Snap clips",
            "arrowDir": "Unknown",
            "imgName": "Air Filter_",
-           "highlightColor":"none_airFilter_corners"
+           "highlightColor":"none_special",
+           "specialCordinates": [0.127, 0.0, -0.127, 0.155, 0.0, 0.127, -0.119, 0.0, 0.127],
+           "planeModifiers": [0.3, 0.3]
        }
        ]
     },
@@ -44,13 +50,17 @@
            "appearText": "Snap final clip",
            "arrowDir": "Unknown",
            "imgName": "airfilter_full3",
-           "highlightColor":"none_airFilter_left"
+           "highlightColor":"none_special",
+           "specialCordinates":  [-0.11, 0.0, -0.06],
+           "planeModifiers": [0.4, 0.4]
        },
        {
            "appearText": "Below this cord",
            "arrowDir": "down",
            "imgName": "cord",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -62,7 +72,9 @@
            "appearText": "none",
            "arrowDir": "left",
            "imgName": "airFilter_five",
-           "highlightColor":"none_airFilter_right"
+           "highlightColor":"none_special",
+           "specialCordinates": [0.127, 0.0, 0.0],
+           "planeModifiers": [0.4, 0.4]
        }
        ]
     },
@@ -74,13 +86,17 @@
            "appearText": "Remove",
            "arrowDir": "Unknown",
            "imgName": "airFilter",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Place here",
            "arrowDir": "down",
            "imgName": "airfilter_hole",
-           "highlightColor":"red_full"
+           "highlightColor":"red_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -92,7 +108,9 @@
            "appearText": "New Air filter",
            "arrowDir": "down",
            "imgName": "airfilter_raw3",
-           "highlightColor":"none_full"
+           "highlightColor":"none_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -104,7 +122,9 @@
            "appearText": "Snap clips",
            "arrowDir": "Unknown",
            "imgName": "Air FilterClip",
-           "highlightColor":"none_airFilter_corners"
+           "highlightColor":"none_special",
+           "specialCordinates": [0.127, 0.0, -0.127, 0.155, 0.0, 0.127, -0.119, 0.0, 0.127],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -116,13 +136,17 @@
            "appearText": "Snap final clip",
            "arrowDir": "Unknown",
            "imgName": "airfilter_fullFinal",
-           "highlightColor":"none_airFilter_left"
+           "highlightColor":"none_special",
+           "specialCordinates": [-0.11, 0.0, -0.06],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Below this cord",
            "arrowDir": "down",
            "imgName": "cordFinal",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -134,7 +158,9 @@
            "appearText": "Close hood",
            "arrowDir": "UnKnown",
            "imgName": "kiaHood1",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     }

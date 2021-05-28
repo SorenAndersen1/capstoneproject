@@ -58,8 +58,8 @@ class libraryViewController: UIViewController,UICollectionViewDelegate, UICollec
                    sender: sender)
     }
 
-    @IBSegueAction func arSegue(_ coder: NSCoder) -> ArViewController? {
-        return ArViewController(coder: coder)
+    @IBSegueAction func arSegue(_ coder: NSCoder) -> ARViewController? {
+        return ARViewController(coder: coder)
     }
     @IBOutlet var libraryCollectionView: UICollectionView!
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,7 +100,7 @@ class libraryViewController: UIViewController,UICollectionViewDelegate, UICollec
     }
     */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if let vc = segue.destination as? ArViewController {
+        if let vc = segue.destination as? ARViewController {
             if let senderButton = sender as? UIButton{
                 print(senderButton.tag)
 

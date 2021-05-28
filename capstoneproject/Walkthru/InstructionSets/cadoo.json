@@ -8,7 +8,10 @@
            "appearText": "Cadoo Box",
            "arrowDir": "down",
            "imgName": "cadooBox",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
+
        }
        ]
     },
@@ -20,7 +23,10 @@
            "appearText": "Fold out",
            "arrowDir": "right",
            "imgName": "foldOut",
-           "highlightColor":"red_full"
+           "highlightColor":"red_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
+
        }
        ]
     },
@@ -32,7 +38,9 @@
            "appearText": "none",
            "arrowDir": "Unknown",
            "imgName": "board",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -44,19 +52,25 @@
            "appearText": "none",
            "arrowDir": "Unknown",
            "imgName": "board1",
-           "highlightColor":"none_airFilter_corner"
+           "highlightColor":"none_special",
+           "specialCordinates": [0.248, 0.01, 0.248, -0.2485, -0.01, -0.248],
+           "planeModifiers": [0.3, 0.3]
        },
        {
            "appearText": "Notepad",
            "arrowDir": "Unknown",
            "imgName": "notepad1",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Notepad",
            "arrowDir": "Unknown",
            "imgName": "notepad2",
-           "highlightColor":"red_full"
+           "highlightColor":"red_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -68,19 +82,25 @@
            "appearText": "none",
            "arrowDir": "Unknown",
            "imgName": "board2",
-           "highlightColor":"none_airFilter_cardinal"
+           "highlightColor":"none_special",
+           "specialCordinates": [0.284, 0.0, 0.0, 0.0, 0.0, 0.284, 0.0, 0.0, -0.284, -0.284, 0.0, 0.0],
+           "planeModifiers": [0.3, 0.3]
        },
        {
            "appearText": "Pieces still in",
            "arrowDir": "Unknown",
            "imgName": "emptierBox",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Pieces Placed",
            "arrowDir": "Unknown",
            "imgName": "semiFullbox",
-           "highlightColor":"red_full"
+           "highlightColor":"red_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -92,19 +112,25 @@
                "appearText": "none",
                "arrowDir": "Unknown",
                "imgName": "cadooBoard",
-               "highlightColor":"none_airFilter_box"
+               "highlightColor":"none_special",
+               "specialCordinates": [-0.213, 0.0, 0.1065, 0.213, 0.0, 0.1605],
+               "planeModifiers": [0.2, 0.2]
        },
        {
            "appearText": "Combo Cards",
            "arrowDir": "Unknown",
            "imgName": "combo",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Solo Cards",
            "arrowDir": "Unknown",
            "imgName": "solo",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -116,25 +142,33 @@
                "appearText": "none",
                "arrowDir": "Unknown",
                "imgName": "boardOfCadoo",
-               "highlightColor":"none_airFilter_misc"
+               "highlightColor":"none_special",
+               "specialCordinates": [-0.27, 0.0, -0.06],
+               "planeModifiers": [0.4, 0.7]
        },
        {
            "appearText": "Clay",
            "arrowDir": "Unknown",
            "imgName": "clay",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Empty box",
            "arrowDir": "Unknown",
            "imgName": "emptyBox",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Glasses",
            "arrowDir": "Unknown",
            "imgName": "glasses",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -146,7 +180,9 @@
            "appearText": "Finished Board!",
            "arrowDir": "down",
            "imgName": "finishedBoard",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     }

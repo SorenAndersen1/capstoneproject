@@ -8,8 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		742CB926264DA7EA00CA93F3 /* LibraryCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742CB925264DA7EA00CA93F3 /* LibraryCollectionCell.swift */; };
+		7430E93026604A0F008509C0 /* InstructionSelectCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7430E92F26604A0F008509C0 /* InstructionSelectCollectionViewCell.swift */; };
+		7467BCCE2660423C00AC7278 /* InstructionSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7467BCCD2660423C00AC7278 /* InstructionSelectViewController.swift */; };
 		747EC242264DE87B00B5A97A /* CreateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 747EC241264DE87B00B5A97A /* CreateViewController.swift */; };
-		749B9E65264CD9320037DFAE /* ArViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B9E64264CD9320037DFAE /* ArViewController.swift */; };
+		749B9E65264CD9320037DFAE /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 749B9E64264CD9320037DFAE /* ARViewController.swift */; };
 		749B9E6D264CDB5A0037DFAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749B9E6B264CDB5A0037DFAE /* Main.storyboard */; };
 		749B9E6E264CDB5A0037DFAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 749B9E6C264CDB5A0037DFAE /* LaunchScreen.storyboard */; };
 		74F995AE264CBE9500F01FE0 /* InstructionSets in Resources */ = {isa = PBXBuildFile; fileRef = 74F9959E264CBE9400F01FE0 /* InstructionSets */; };
@@ -25,19 +27,21 @@
 
 /* Begin PBXFileReference section */
 		742CB925264DA7EA00CA93F3 /* LibraryCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionCell.swift; sourceTree = "<group>"; };
+		7430E92F26604A0F008509C0 /* InstructionSelectCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstructionSelectCollectionViewCell.swift; path = Walkthru/InstructionSelectCollectionViewCell.swift; sourceTree = SOURCE_ROOT; };
+		7467BCCD2660423C00AC7278 /* InstructionSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = InstructionSelectViewController.swift; path = Walkthru/InstructionSelectViewController.swift; sourceTree = SOURCE_ROOT; };
 		747EC241264DE87B00B5A97A /* CreateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateViewController.swift; sourceTree = "<group>"; };
-		749B9E64264CD9320037DFAE /* ArViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArViewController.swift; sourceTree = "<group>"; };
+		749B9E64264CD9320037DFAE /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		749B9E6B264CDB5A0037DFAE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		749B9E6C264CDB5A0037DFAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		74ACFBA7264E00E500625754 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../Downloads/WalkThru/Info.plist; sourceTree = "<group>"; };
+		74ACFBA7264E00E500625754 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Walkthru/Info.plist; sourceTree = "<group>"; };
 		74F99583264CBE2400F01FE0 /* WalkThru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkThru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F9959E264CBE9400F01FE0 /* InstructionSets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = InstructionSets; sourceTree = "<group>"; };
 		74F9959F264CBE9400F01FE0 /* JsonDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDecode.swift; sourceTree = "<group>"; };
-		74F995A4264CBE9400F01FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../finalproject/multiIdentify/WalkThru/Assets.xcassets; sourceTree = "<group>"; };
+		74F995A4264CBE9400F01FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Walkthru/Assets.xcassets; sourceTree = "<group>"; };
 		74F995A5264CBE9400F01FE0 /* InstructionText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionText.swift; sourceTree = "<group>"; };
-		74F995A6264CBE9400F01FE0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ../../../finalproject/multiIdentify/WalkThru/art.scnassets; sourceTree = "<group>"; };
+		74F995A6264CBE9400F01FE0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ../Walkthru/art.scnassets; sourceTree = "<group>"; };
 		74F995A7264CBE9500F01FE0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		74F995A8264CBE9500F01FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../finalproject/multiIdentify/WalkThru/AppDelegate.swift; sourceTree = "<group>"; };
+		74F995A8264CBE9500F01FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../Walkthru/AppDelegate.swift; sourceTree = "<group>"; };
 		74F995AA264CBE9500F01FE0 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		74F995AB264CBE9500F01FE0 /* libraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -79,11 +83,13 @@
 				74F995A5264CBE9400F01FE0 /* InstructionText.swift */,
 				74F9959F264CBE9400F01FE0 /* JsonDecode.swift */,
 				742CB925264DA7EA00CA93F3 /* LibraryCollectionCell.swift */,
+				7430E92F26604A0F008509C0 /* InstructionSelectCollectionViewCell.swift */,
 				749B9E6C264CDB5A0037DFAE /* LaunchScreen.storyboard */,
 				749B9E6B264CDB5A0037DFAE /* Main.storyboard */,
-				749B9E64264CD9320037DFAE /* ArViewController.swift */,
+				749B9E64264CD9320037DFAE /* ARViewController.swift */,
 				74F995AB264CBE9500F01FE0 /* libraryViewController.swift */,
 				747EC241264DE87B00B5A97A /* CreateViewController.swift */,
+				7467BCCD2660423C00AC7278 /* InstructionSelectViewController.swift */,
 				74F995A7264CBE9500F01FE0 /* LoginViewController.swift */,
 				74ACFBA7264E00E500625754 /* Info.plist */,
 				74F995AA264CBE9500F01FE0 /* Step.swift */,
@@ -167,8 +173,10 @@
 				74F995B7264CBE9500F01FE0 /* LoginViewController.swift in Sources */,
 				74F995BB264CBE9500F01FE0 /* libraryViewController.swift in Sources */,
 				747EC242264DE87B00B5A97A /* CreateViewController.swift in Sources */,
-				749B9E65264CD9320037DFAE /* ArViewController.swift in Sources */,
+				749B9E65264CD9320037DFAE /* ARViewController.swift in Sources */,
+				7430E93026604A0F008509C0 /* InstructionSelectCollectionViewCell.swift in Sources */,
 				74F995BA264CBE9500F01FE0 /* Step.swift in Sources */,
+				7467BCCE2660423C00AC7278 /* InstructionSelectViewController.swift in Sources */,
 				742CB926264DA7EA00CA93F3 /* LibraryCollectionCell.swift in Sources */,
 				74F995AF264CBE9500F01FE0 /* JsonDecode.swift in Sources */,
 				74F995B8264CBE9500F01FE0 /* AppDelegate.swift in Sources */,
@@ -230,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -285,7 +293,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -302,16 +310,16 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
-				DEVELOPMENT_TEAM = 6V5PK9N25M;
+				CURRENT_PROJECT_VERSION = 6;
+				DEVELOPMENT_TEAM = 988U7K63MN;
 				INFOPLIST_FILE = WalkThru/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Soren-Andersen.WalkThru";
+				MARKETING_VERSION = 5.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ClairesWalkThru2.WalkThru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -326,15 +334,15 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = 6V5PK9N25M;
 				INFOPLIST_FILE = WalkThru/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 3.0;
+				MARKETING_VERSION = 5.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "Soren-Andersen.WalkThru";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;

@@ -19,6 +19,8 @@ struct ItemInfo : Decodable {
     var arrowDir: String
     var imgName: String
     var highlightColor: String
+    var specialCordinates: [Float]
+    var planeModifiers: [Float]
 }
 
 ///Creates an array of InstInfo respresenting the data in the provided json file
@@ -54,7 +56,7 @@ func createInstructionText(filename fileName: String) -> InstructionText?{
         //TODO - refactor to no longer need these
         newText.appendInstructionText(text: fakeTextConst)
         newText.appendSuccessText(text: fakeTextConst)
-        newText.createAndAppendInfos(appearText: [fakeTextConst], arrowDir: [fakeTextConst], imgName: [fakeTextConst], highlightedColor: [fakeTextConst])
+        newText.createAndAppendInfos(appearText: [fakeTextConst], arrowDir: [fakeTextConst], imgName: [fakeTextConst], highlightedColor: [fakeTextConst], specialCordinates: [[0.0], [0.0]], planeModifiers: [[0.0], [0.0]])
         let num = rawData.count
         
         //Iterate over all steps
@@ -63,7 +65,7 @@ func createInstructionText(filename fileName: String) -> InstructionText?{
             newText.appendSuccessText(text: rawData[n].successText)
             let numInfos = rawData[n].itemInfos.count
             var appearText = [String](), arrowDir = [String](),
-                imgName = [String](), highlightedColor = [String]()
+                imgName = [String](), highlightedColor = [String](), specialCordinates = [[Float]](), planeModifiers = [[Float]]()
             
             //Iterate over all image infos in the step
             for j in 0...numInfos - 1{
@@ -71,10 +73,15 @@ func createInstructionText(filename fileName: String) -> InstructionText?{
                 arrowDir.append(rawData[n].itemInfos[j].arrowDir)
                 imgName.append(rawData[n].itemInfos[j].imgName)
                 highlightedColor.append(rawData[n].itemInfos[j].highlightColor)
+                let numCords = rawData[n].itemInfos[j].specialCordinates.count
+                for k in 0...numCords - 1 {
+                    specialCordinates.append(rawData[n].itemInfos[j].specialCordinates)
+                }
+                planeModifiers.append(rawData[n].itemInfos[j].planeModifiers)
                
             }
             
-            newText.createAndAppendInfos(appearText: appearText, arrowDir: arrowDir, imgName: imgName, highlightedColor: highlightedColor)
+            newText.createAndAppendInfos(appearText: appearText, arrowDir: arrowDir, imgName: imgName, highlightedColor: highlightedColor, specialCordinates: specialCordinates, planeModifiers: planeModifiers)
         }
       return newText
     }
