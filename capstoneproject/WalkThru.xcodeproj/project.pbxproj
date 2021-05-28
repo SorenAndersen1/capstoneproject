@@ -33,15 +33,15 @@
 		749B9E64264CD9320037DFAE /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
 		749B9E6B264CDB5A0037DFAE /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		749B9E6C264CDB5A0037DFAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		74ACFBA7264E00E500625754 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../../../../Downloads/WalkThru/Info.plist; sourceTree = "<group>"; };
+		74ACFBA7264E00E500625754 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Walkthru/Info.plist; sourceTree = "<group>"; };
 		74F99583264CBE2400F01FE0 /* WalkThru.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WalkThru.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F9959E264CBE9400F01FE0 /* InstructionSets */ = {isa = PBXFileReference; lastKnownFileType = folder; path = InstructionSets; sourceTree = "<group>"; };
 		74F9959F264CBE9400F01FE0 /* JsonDecode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonDecode.swift; sourceTree = "<group>"; };
-		74F995A4264CBE9400F01FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../../finalproject/multiIdentify/WalkThru/Assets.xcassets; sourceTree = "<group>"; };
+		74F995A4264CBE9400F01FE0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Walkthru/Assets.xcassets; sourceTree = "<group>"; };
 		74F995A5264CBE9400F01FE0 /* InstructionText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstructionText.swift; sourceTree = "<group>"; };
-		74F995A6264CBE9400F01FE0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ../../../finalproject/multiIdentify/WalkThru/art.scnassets; sourceTree = "<group>"; };
+		74F995A6264CBE9400F01FE0 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; name = art.scnassets; path = ../Walkthru/art.scnassets; sourceTree = "<group>"; };
 		74F995A7264CBE9500F01FE0 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		74F995A8264CBE9500F01FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../../../finalproject/multiIdentify/WalkThru/AppDelegate.swift; sourceTree = "<group>"; };
+		74F995A8264CBE9500F01FE0 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../Walkthru/AppDelegate.swift; sourceTree = "<group>"; };
 		74F995AA264CBE9500F01FE0 /* Step.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Step.swift; sourceTree = "<group>"; };
 		74F995AB264CBE9500F01FE0 /* libraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = libraryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -311,7 +311,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 6;
-				DEVELOPMENT_TEAM = 6V5PK9N25M;
+				DEVELOPMENT_TEAM = 988U7K63MN;
 				INFOPLIST_FILE = WalkThru/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -319,7 +319,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 5.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "Soren-Andersen.WalkThru";
+				PRODUCT_BUNDLE_IDENTIFIER = ClairesWalkThru2.WalkThru;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
