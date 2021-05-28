@@ -32,12 +32,16 @@ class ImageInfo {
     let arrowDir: String
     let imgName: String
     var highLightColor: String
+    var specialCordinates: [Float]
+    var planeModifiers: [Float]
     
-    init(appearText: String, arrowDir: String, imgName: String, highlightColor: String){
+    init(appearText: String, arrowDir: String, imgName: String, highlightColor: String, specialCords: [Float], planeMod: [Float]){
         self.appearText = appearText
         self.arrowDir = arrowDir
         self.imgName = imgName
         self.highLightColor = highlightColor
+        self.specialCordinates = specialCords
+        self.planeModifiers = planeMod
     }
     
     func sethighLightColor(highLightColor: String){

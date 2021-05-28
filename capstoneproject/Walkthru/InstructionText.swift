@@ -21,10 +21,10 @@ class InstructionText{
         }
     }
     
-    func createAndAppendInfos(appearText: [String], arrowDir: [String], imgName: [String], highlightedColor: [String]){
+    func createAndAppendInfos(appearText: [String], arrowDir: [String], imgName: [String], highlightedColor: [String], specialCordinates: [[Float]], planeModifiers: [[Float]]){
         var fullImage = [ImageInfo]()
         for n in 0...appearText.count - 1 {
-            fullImage.append(ImageInfo(appearText: appearText[n], arrowDir: arrowDir[n], imgName: imgName[n], highlightColor: highlightedColor[n]))
+            fullImage.append(ImageInfo(appearText: appearText[n], arrowDir: arrowDir[n], imgName: imgName[n], highlightColor: highlightedColor[n], specialCords: specialCordinates[n], planeMod: planeModifiers[n]))
             
         }
         

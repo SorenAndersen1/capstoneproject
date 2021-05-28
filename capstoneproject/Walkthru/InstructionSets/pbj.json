@@ -8,7 +8,9 @@
            "appearText": "Open Bread",
            "arrowDir": "Unknown",
            "imgName": "bread",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -20,7 +22,9 @@
            "appearText": "Place bread",
            "arrowDir": "down",
            "imgName": "plate",
-           "highlightColor":"none_airFilter_plate"
+           "highlightColor":"none_special",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -32,37 +36,49 @@
            "appearText": "Spin Lid right",
            "arrowDir": "right",
            "imgName": "canLid",
-           "highlightColor":"red_circle"
+           "highlightColor":"red_circle",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Open Jar",
            "arrowDir": "Unknown",
            "imgName": "jamJar",
-           "highlightColor":"red_full"
+           "highlightColor":"red_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Open Jar of Jif",
            "arrowDir": "Unknown",
            "imgName": "jifLabel",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Spin Lid right",
            "arrowDir": "right",
            "imgName": "jifLid",
-           "highlightColor":"green_circle"
+           "highlightColor":"green_circle",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Open Jar of Skippy",
            "arrowDir": "Unknown",
            "imgName": "skippLabel",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": "Spin Lid right",
            "arrowDir": "right",
            "imgName": "skippyCap",
-           "highlightColor":"green_circle"
+           "highlightColor":"green_circle",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -74,7 +90,9 @@
            "appearText": "Finished sandwich",
            "arrowDir": "Unknown",
            "imgName": "breadPiece",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     },
@@ -86,13 +104,17 @@
            "appearText": "Complete sandwich!",
            "arrowDir": "down",
            "imgName": "breadPiece1",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        },
        {
            "appearText": " Use Bags",
            "arrowDir": "Unknown",
            "imgName": "ziploc",
-           "highlightColor":"green_full"
+           "highlightColor":"green_full",
+           "specialCordinates": [0.0],
+           "planeModifiers": [0.0]
        }
        ]
     }
