@@ -1,0 +1,142 @@
+{
+    "instructions":[
+    {
+       "instructionText":"Identify box",
+       "successText":"Cadoo Deluxe Edition",
+       "itemInfos":[
+       {
+           "appearText": "Cadoo Box",
+           "arrowDir": "down",
+           "imgName": "cadooBox",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Identify board",
+       "successText":"Place board on table",
+       "itemInfos":[
+       {
+           "appearText": "Fold out",
+           "arrowDir": "right",
+           "imgName": "foldOut",
+           "highlightColor":"red_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Fold board out so circle side is visible",
+       "successText":"Board correctly positioned",
+       "itemInfos":[
+       {
+           "appearText": "Full Board",
+           "arrowDir": "down",
+           "imgName": "board",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take notepads out and set on oppisites side of the board",
+       "successText":"Notepads found",
+       "itemInfos":[
+       {
+           "appearText": "Full Board",
+           "arrowDir": "down",
+           "imgName": "board1",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Notepad",
+           "arrowDir": "Unknown",
+           "imgName": "notepad1",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Notepad",
+           "arrowDir": "Unknown",
+           "imgName": "notepad2",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Remove all 4 sets of pieces and place one each side of gameboard",
+       "successText":"Pieces in position",
+       "itemInfos":[
+       {
+           "appearText": "Full Board",
+           "arrowDir": "down",
+           "imgName": "board2",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Pieces still in",
+           "arrowDir": "Unknown",
+           "imgName": "emptierBox",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Pieces Placed",
+           "arrowDir": "Unknown",
+           "imgName": "semiFullbox",
+           "highlightColor":"red_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Take boxes of cards reading 'Solo' and 'Combo' out",
+       "successText":"Card boxes found",
+       "itemInfos":[
+       {
+           "appearText": "Combo Cards",
+           "arrowDir": "Unknown",
+           "imgName": "combo",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Solo Cards",
+           "arrowDir": "Unknown",
+           "imgName": "solo",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"Remove timer and clay and place die in the middle",
+       "successText":"Assorted pieces ready",
+       "itemInfos":[
+       {
+           "appearText": "Clay",
+           "arrowDir": "Unknown",
+           "imgName": "clay",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Empty box",
+           "arrowDir": "Unknown",
+           "imgName": "emptyBox",
+           "highlightColor":"green_full"
+       },
+       {
+           "appearText": "Glasses",
+           "arrowDir": "Unknown",
+           "imgName": "glasses",
+           "highlightColor":"green_full"
+       }
+       ]
+    },
+    {
+       "instructionText":"If highlighted the board is set up",
+       "successText":"Congrats! Have fun playing Cadoo!",
+       "itemInfos":[
+       {
+           "appearText": "Finished Board!",
+           "arrowDir": "down",
+           "imgName": "board_and_dice",
+           "highlightColor":"green_full"
+       }
+       ]
+    }
+    ]
+}
